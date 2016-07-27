@@ -1,0 +1,24 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "http://ontosoft.org/softwareCategories#MetadataCategory" "http://ontosoft.org/softwareCategories#Cite" "http://ontosoft.org/softwareCategories#Access" "http://ontosoft.org/softwareCategories#Experiment" "http://ontosoft.org/softwareCategories#Track" "http://ontosoft.org/softwareCategories#Locate" "http://ontosoft.org/softwareCategories#Contribute" "http://ontosoft.org/softwareCategories#Discuss" "http://ontosoft.org/softwareCategories#GetSupport" "http://ontosoft.org/softwareCategories#Compose" "http://ontosoft.org/softwareCategories#Identify" "http://ontosoft.org/softwareCategories#Understand" "http://ontosoft.org/softwareCategories#Execute" "http://ontosoft.org/softwareCategories#Research" "http://ontosoft.org/softwareCategories#Update" "http://ontosoft.org/softwareCategories#Relate" "http://ontosoft.org/softwareCategories#Trust" "http://ontosoft.org/softwareCategories#Run" "http://ontosoft.org/softwareCategories#Install" ; /*classes style*/
+	"http://ontosoft.org/softwareCategories#Experiment" -> "http://ontosoft.org/softwareCategories#Research" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Locate" -> "http://ontosoft.org/softwareCategories#Identify" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Execute" -> "http://ontosoft.org/softwareCategories#MetadataCategory" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Compose" -> "http://ontosoft.org/softwareCategories#Research" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Contribute" -> "http://ontosoft.org/softwareCategories#Update" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Relate" -> "http://ontosoft.org/softwareCategories#Understand" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#GetSupport" -> "http://ontosoft.org/softwareCategories#MetadataCategory" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Identify" -> "http://ontosoft.org/softwareCategories#MetadataCategory" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Discuss" -> "http://ontosoft.org/softwareCategories#GetSupport" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Access" -> "http://ontosoft.org/softwareCategories#Execute" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Install" -> "http://ontosoft.org/softwareCategories#Execute" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Run" -> "http://ontosoft.org/softwareCategories#Execute" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Cite" -> "http://ontosoft.org/softwareCategories#Research" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Track" -> "http://ontosoft.org/softwareCategories#Update" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Understand" -> "http://ontosoft.org/softwareCategories#MetadataCategory" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Update" -> "http://ontosoft.org/softwareCategories#MetadataCategory" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Trust" -> "http://ontosoft.org/softwareCategories#Understand" [ label = "rdfs:subClassOf" ];
+	"http://ontosoft.org/softwareCategories#Research" -> "http://ontosoft.org/softwareCategories#MetadataCategory" [ label = "rdfs:subClassOf" ];
+
+}

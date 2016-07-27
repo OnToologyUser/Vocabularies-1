@@ -1,0 +1,93 @@
+<http://ontosoft.org/softwareCategories#Experiment> <http://www.w3.org/2000/01/rdf-schema#comment> "run with other data"@en .
+<http://ontosoft.org/softwareCategories#Experiment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#Research> .
+<http://ontosoft.org/softwareCategories#Experiment> <http://www.w3.org/2000/01/rdf-schema#label> "Experiment"@en .
+<http://ontosoft.org/softwareCategories#Experiment> <http://ontosoft.org/software#uiConfig> "{\"position\":1}" .
+<http://ontosoft.org/softwareCategories#Experiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#Locate> <http://www.w3.org/2000/01/rdf-schema#comment> "unique description" .
+<http://ontosoft.org/softwareCategories#Locate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#Identify> .
+<http://ontosoft.org/softwareCategories#Locate> <http://www.w3.org/2000/01/rdf-schema#label> "Locate" .
+<http://ontosoft.org/softwareCategories#Locate> <http://ontosoft.org/software#uiConfig> "{\"position\":1}" .
+<http://ontosoft.org/softwareCategories#Locate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#Execute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#MetadataCategory> .
+<http://ontosoft.org/softwareCategories#Execute> <http://www.w3.org/2000/01/rdf-schema#label> "Execute"@en .
+<http://ontosoft.org/softwareCategories#Execute> <http://ontosoft.org/software#uiConfig> "{\"position\":3}" .
+<http://ontosoft.org/softwareCategories#Execute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#Compose> <http://www.w3.org/2000/01/rdf-schema#comment> "run with other software"@en .
+<http://ontosoft.org/softwareCategories#Compose> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#Research> .
+<http://ontosoft.org/softwareCategories#Compose> <http://www.w3.org/2000/01/rdf-schema#label> "Compose"@en .
+<http://ontosoft.org/softwareCategories#Compose> <http://ontosoft.org/software#uiConfig> "{\"position\":2}" .
+<http://ontosoft.org/softwareCategories#Compose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#Contribute> <http://www.w3.org/2000/01/rdf-schema#comment> "evolution"@en .
+<http://ontosoft.org/softwareCategories#Contribute> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#Update> .
+<http://ontosoft.org/softwareCategories#Contribute> <http://www.w3.org/2000/01/rdf-schema#label> "Contribute"@en .
+<http://ontosoft.org/softwareCategories#Contribute> <http://ontosoft.org/software#uiConfig> "{\"position\":1}" .
+<http://ontosoft.org/softwareCategories#Contribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#Relate> <http://www.w3.org/2000/01/rdf-schema#comment> "domain knowledge"@en .
+<http://ontosoft.org/softwareCategories#Relate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#Understand> .
+<http://ontosoft.org/softwareCategories#Relate> <http://www.w3.org/2000/01/rdf-schema#label> "Relate"@en .
+<http://ontosoft.org/softwareCategories#Relate> <http://ontosoft.org/software#uiConfig> "{\"position\":2}" .
+<http://ontosoft.org/softwareCategories#Relate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#GetSupport> <http://www.w3.org/2000/01/rdf-schema#comment> "All the properties that relate to describing how to get support from a community" .
+<http://ontosoft.org/softwareCategories#GetSupport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#MetadataCategory> .
+<http://ontosoft.org/softwareCategories#GetSupport> <http://www.w3.org/2000/01/rdf-schema#label> "Get Support" .
+<http://ontosoft.org/softwareCategories#GetSupport> <http://ontosoft.org/software#uiConfig> "{\"position\":5}" .
+<http://ontosoft.org/softwareCategories#GetSupport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#MetadataCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Categories of metadata properties are defined as subclass of this"@en .
+<http://ontosoft.org/softwareCategories#MetadataCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Metadata Category"@en .
+<http://ontosoft.org/softwareCategories#MetadataCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#Identify> <http://www.w3.org/2000/01/rdf-schema#comment> "Properties that identify how to refer to a resource" .
+<http://ontosoft.org/softwareCategories#Identify> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#MetadataCategory> .
+<http://ontosoft.org/softwareCategories#Identify> <http://www.w3.org/2000/01/rdf-schema#label> "Identify" .
+<http://ontosoft.org/softwareCategories#Identify> <http://ontosoft.org/software#uiConfig> "{\"position\":1}" .
+<http://ontosoft.org/softwareCategories#Identify> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#Discuss> <http://www.w3.org/2000/01/rdf-schema#comment> "support and community"@en .
+<http://ontosoft.org/softwareCategories#Discuss> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#GetSupport> .
+<http://ontosoft.org/softwareCategories#Discuss> <http://www.w3.org/2000/01/rdf-schema#label> "Discuss"@en .
+<http://ontosoft.org/softwareCategories#Discuss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#Access> <http://www.w3.org/2000/01/rdf-schema#comment> "download"@en .
+<http://ontosoft.org/softwareCategories#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#Execute> .
+<http://ontosoft.org/softwareCategories#Access> <http://www.w3.org/2000/01/rdf-schema#label> "Access"@en .
+<http://ontosoft.org/softwareCategories#Access> <http://ontosoft.org/software#uiConfig> "{\"position\":1}" .
+<http://ontosoft.org/softwareCategories#Access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#Install> <http://www.w3.org/2000/01/rdf-schema#comment> "execution requirements"@en .
+<http://ontosoft.org/softwareCategories#Install> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#Execute> .
+<http://ontosoft.org/softwareCategories#Install> <http://www.w3.org/2000/01/rdf-schema#label> "Install"@en .
+<http://ontosoft.org/softwareCategories#Install> <http://ontosoft.org/software#uiConfig> "{\"position\":2}" .
+<http://ontosoft.org/softwareCategories#Install> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontosoft Categories is an ontology to describe the taxonomy of categories in Ontosoft."^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://ontosoft.org/softwareCategories> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://ontosoft.org/softwareCategories> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://ontosoft.org/softwareCategories#Run> <http://www.w3.org/2000/01/rdf-schema#comment> "testing execution"@en .
+<http://ontosoft.org/softwareCategories#Run> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#Execute> .
+<http://ontosoft.org/softwareCategories#Run> <http://www.w3.org/2000/01/rdf-schema#label> "Run"@en .
+<http://ontosoft.org/softwareCategories#Run> <http://ontosoft.org/software#uiConfig> "{\"position\":3}" .
+<http://ontosoft.org/softwareCategories#Run> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#Cite> <http://www.w3.org/2000/01/rdf-schema#comment> "scientific publications"@en .
+<http://ontosoft.org/softwareCategories#Cite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#Research> .
+<http://ontosoft.org/softwareCategories#Cite> <http://www.w3.org/2000/01/rdf-schema#label> "Cite"@en .
+<http://ontosoft.org/softwareCategories#Cite> <http://ontosoft.org/software#uiConfig> "{\"position\":3}" .
+<http://ontosoft.org/softwareCategories#Cite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#Track> <http://www.w3.org/2000/01/rdf-schema#comment> "versions"@en .
+<http://ontosoft.org/softwareCategories#Track> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#Update> .
+<http://ontosoft.org/softwareCategories#Track> <http://www.w3.org/2000/01/rdf-schema#label> "Track"@en .
+<http://ontosoft.org/softwareCategories#Track> <http://ontosoft.org/software#uiConfig> "{\"position\":2}" .
+<http://ontosoft.org/softwareCategories#Track> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#Understand> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#MetadataCategory> .
+<http://ontosoft.org/softwareCategories#Understand> <http://www.w3.org/2000/01/rdf-schema#label> "Understand"@en .
+<http://ontosoft.org/softwareCategories#Understand> <http://ontosoft.org/software#uiConfig> "{\"position\":2}" .
+<http://ontosoft.org/softwareCategories#Understand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/software#uiConfig> <http://www.w3.org/2000/01/rdf-schema#comment> "This property annotation provides UI specific information for the property like positioning, special UI interface, etc"@en .
+<http://ontosoft.org/software#uiConfig> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://ontosoft.org/softwareCategories#Update> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#MetadataCategory> .
+<http://ontosoft.org/softwareCategories#Update> <http://www.w3.org/2000/01/rdf-schema#label> "Update"@en .
+<http://ontosoft.org/softwareCategories#Update> <http://ontosoft.org/software#uiConfig> "{\"position\":6}" .
+<http://ontosoft.org/softwareCategories#Update> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#Trust> <http://www.w3.org/2000/01/rdf-schema#comment> "quality and ratings"@en .
+<http://ontosoft.org/softwareCategories#Trust> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#Understand> .
+<http://ontosoft.org/softwareCategories#Trust> <http://www.w3.org/2000/01/rdf-schema#label> "Trust"@en .
+<http://ontosoft.org/softwareCategories#Trust> <http://ontosoft.org/software#uiConfig> "{\"position\":1}" .
+<http://ontosoft.org/softwareCategories#Trust> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/softwareCategories#Research> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/softwareCategories#MetadataCategory> .
+<http://ontosoft.org/softwareCategories#Research> <http://www.w3.org/2000/01/rdf-schema#label> "Do Research"@en .
+<http://ontosoft.org/softwareCategories#Research> <http://ontosoft.org/software#uiConfig> "{\"position\":4}" .
+<http://ontosoft.org/softwareCategories#Research> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

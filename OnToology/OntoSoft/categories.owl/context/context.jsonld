@@ -1,0 +1,73 @@
+{
+  "@context" : {
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "Run" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Run"
+    },
+    "Locate" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Locate"
+    },
+    "Cite" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Cite"
+    },
+    "Discuss" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Discuss"
+    },
+    "Install" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Install"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Update" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Update"
+    },
+    "MetadataCategory" : {
+      "@id" : "http://ontosoft.org/softwareCategories#MetadataCategory"
+    },
+    "Understand" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Understand"
+    },
+    "Contribute" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Contribute"
+    },
+    "Access" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Access"
+    },
+    "GetSupport" : {
+      "@id" : "http://ontosoft.org/softwareCategories#GetSupport"
+    },
+    "Track" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Track"
+    },
+    "Execute" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Execute"
+    },
+    "Compose" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Compose"
+    },
+    "Trust" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Trust"
+    },
+    "Identify" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Identify"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Research" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Research"
+    },
+    "uiConfig" : {
+      "@id" : "http://ontosoft.org/software#uiConfig"
+    },
+    "Experiment" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Experiment"
+    },
+    "Relate" : {
+      "@id" : "http://ontosoft.org/softwareCategories#Relate"
+    }
+  }
+}

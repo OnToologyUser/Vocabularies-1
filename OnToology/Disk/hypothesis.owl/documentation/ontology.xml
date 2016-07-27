@@ -1,0 +1,29 @@
+<rdf:RDF
+    xmlns="http://disk-project.org/ontology/hypothesis#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+  <rdf:Description rdf:about="http://disk-project.org/ontology/hypothesis#associatedWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://disk-project.org/ontology/hypothesis">
+    <dc:contributor>Yolanda Gil</dc:contributor>
+    <dc:creator>Varun Ratnakar</dc:creator>
+    <owl:versionIRI rdf:resource="http://www.disk-project.org/ontology/hypothesis/hypothesis-1.0.0.owlUPDATE"/>
+    <rdfs:comment xml:lang="en">The hypothesis vocabulary introduces a set of terms and properties for linking the terms included in a hypothesis. </rdfs:comment>
+    <dcterms:abstract xml:lang="en">The hypothesis vocabulary introduces a set of terms and properties for linking the terms included in a hypothesis. </dcterms:abstract>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:versionInfo>1.0.0 First Draft</owl:versionInfo>
+    <dc:description xml:lang="en">The hypothesis vocabulary introduces a set of terms and properties for linking the terms included in a hypothesis. </dc:description>
+    <dc:contributor>Daniel Garijo</dc:contributor>
+    <vann:preferredNamespaceUri rdf:resource="http://disk-project.org/ontology/hypothesis"/>
+    <dc:title xml:lang="en">The Disk-hypothesis Ontology</dc:title>
+    <vann:preferredNamespacePrefix>hyp</vann:preferredNamespacePrefix>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-03-24T20:18:00Z</dc:created>
+    <dcterms:license rdf:resource="http://purl.org/NET/rdflicense/APACHE2.0"/>
+  </rdf:Description>
+</rdf:RDF>

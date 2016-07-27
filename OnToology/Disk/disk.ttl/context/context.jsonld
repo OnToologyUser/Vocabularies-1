@@ -1,0 +1,105 @@
+{
+  "@context" : {
+    "abstract" : {
+      "@id" : "http://purl.org/dc/terms/abstract"
+    },
+    "hasTriggeredLOIStatus" : {
+      "@id" : "http://disk-project.org/ontology/disk#hasTriggeredLOIStatus",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/elements/1.1/created"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "hasBinding" : {
+      "@id" : "http://disk-project.org/ontology/disk#hasBinding",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasResultingHypothesis" : {
+      "@id" : "http://disk-project.org/ontology/disk#hasResultingHypothesis",
+      "@type" : "@id"
+    },
+    "LineOfInquiry" : {
+      "@id" : "http://disk-project.org/ontology/disk#LineOfInquiry"
+    },
+    "Hypothesis" : {
+      "@id" : "http://disk-project.org/ontology/disk#Hypothesis"
+    },
+    "TriggeredLOI" : {
+      "@id" : "http://disk-project.org/ontology/disk#TriggeredLOI"
+    },
+    "hasWorkflowBindings" : {
+      "@id" : "http://disk-project.org/ontology/disk#hasWorkflowBindings",
+      "@type" : "@id"
+    },
+    "Graph" : {
+      "@id" : "http://disk-project.org/ontology/disk#Graph"
+    },
+    "WorkflowBindings" : {
+      "@id" : "http://disk-project.org/ontology/disk#WorkflowBindings"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "createdFrom" : {
+      "@id" : "http://disk-project.org/ontology/disk#createdFrom",
+      "@type" : "@id"
+    },
+    "hasPatternQuery" : {
+      "@id" : "http://disk-project.org/ontology/disk#hasPatternQuery",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "hasVariable" : {
+      "@id" : "http://disk-project.org/ontology/disk#hasVariable",
+      "@type" : "@id"
+    },
+    "Workflow" : {
+      "@id" : "http://disk-project.org/ontology/disk#Workflow"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "Data" : {
+      "@id" : "http://disk-project.org/ontology/disk#Data"
+    },
+    "hasParentHypothesis" : {
+      "@id" : "http://disk-project.org/ontology/disk#hasParentHypothesis",
+      "@type" : "@id"
+    },
+    "hasLOI" : {
+      "@id" : "http://disk-project.org/ontology/disk#hasLOI",
+      "@type" : "@id"
+    },
+    "VariableBinding" : {
+      "@id" : "http://disk-project.org/ontology/disk#VariableBinding"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/elements/1.1/contributor"
+    },
+    "hasMetaWorkflowBindings" : {
+      "@id" : "http://disk-project.org/ontology/disk#hasMetaWorkflowBindings",
+      "@type" : "@id"
+    },
+    "hasVariableBinding" : {
+      "@id" : "http://disk-project.org/ontology/disk#hasVariableBinding",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}

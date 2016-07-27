@@ -1,0 +1,55 @@
+<http://disk-project.org/ontology/disk#Graph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#WorkflowBindings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#Graph> .
+<http://disk-project.org/ontology/disk#Hypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#hasParentHypothesis> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#Hypothesis> .
+<http://disk-project.org/ontology/disk#hasParentHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasLOI> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#TriggeredLOI> .
+<http://disk-project.org/ontology/disk#hasLOI> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasLOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#VariableBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#Workflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#Graph> .
+<http://disk-project.org/ontology/disk#Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#LineOfInquiry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#Graph> .
+<http://disk-project.org/ontology/disk#LineOfInquiry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#hasPatternQuery> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://disk-project.org/ontology/disk#hasPatternQuery> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasPatternQuery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/disk> <http://purl.org/dc/elements/1.1/description> "The Disk vocabulary introduces the terms for creating hypothesis graphs and associate them to different lines of inquiry. "@en .
+<http://disk-project.org/ontology/disk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://disk-project.org/ontology/disk> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0 First Draft" .
+<http://disk-project.org/ontology/disk> <http://purl.org/dc/elements/1.1/contributor> "Daniel Garijo" .
+<http://disk-project.org/ontology/disk> <http://purl.org/dc/elements/1.1/title> "The Disk-terms Ontology"@en .
+<http://disk-project.org/ontology/disk> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.disk-project.org/ontology/disk/disk-1.0.0.owl#UPDATE> .
+<http://disk-project.org/ontology/disk> <http://www.w3.org/2000/01/rdf-schema#comment> "The Disk vocabulary introduces the terms for creating hypothesis graphs and associate them to different lines of inquiry. "@en .
+<http://disk-project.org/ontology/disk> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> .
+<http://disk-project.org/ontology/disk> <http://purl.org/vocab/vann/preferredNamespaceUri> <http://disk-project.org/ontology/disk> .
+<http://disk-project.org/ontology/disk> <http://purl.org/dc/elements/1.1/creator> "Varun Ratnakar" .
+<http://disk-project.org/ontology/disk> <http://purl.org/dc/elements/1.1/contributor> "Yolanda Gil" .
+<http://disk-project.org/ontology/disk> <http://purl.org/vocab/vann/preferredNamespacePrefix> "disk" .
+<http://disk-project.org/ontology/disk> <http://purl.org/dc/elements/1.1/created> "2016-03-24T20:18:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://disk-project.org/ontology/disk> <http://purl.org/dc/terms/abstract> "The Disk vocabulary introduces the terms for creating hypothesis graphs and associate them to different lines of inquiry. "@en .
+<http://disk-project.org/ontology/disk#hasVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#VariableBinding> .
+<http://disk-project.org/ontology/disk#hasVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasWorkflowBindings> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#WorkflowBindings> .
+<http://disk-project.org/ontology/disk#hasWorkflowBindings> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasWorkflowBindings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#createdFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#Data> .
+<http://disk-project.org/ontology/disk#createdFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasResultingHypothesis> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#Hypothesis> .
+<http://disk-project.org/ontology/disk#hasResultingHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasMetaWorkflowBindings> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#WorkflowBindings> .
+<http://disk-project.org/ontology/disk#hasMetaWorkflowBindings> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+<http://disk-project.org/ontology/disk#hasMetaWorkflowBindings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasBinding> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://disk-project.org/ontology/disk#hasBinding> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#VariableBinding> .
+<http://disk-project.org/ontology/disk#hasBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/disk#TriggeredLOI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#LineOfInquiry> .
+<http://disk-project.org/ontology/disk#TriggeredLOI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/disk#hasVariableBinding> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#WorkflowBindings> .
+<http://disk-project.org/ontology/disk#hasVariableBinding> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/disk#VariableBinding> .
+<http://disk-project.org/ontology/disk#hasVariableBinding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/disk#hasTriggeredLOIStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://disk-project.org/ontology/disk#hasTriggeredLOIStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/disk#TriggeredLOI> .
+<http://disk-project.org/ontology/disk#hasTriggeredLOIStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .

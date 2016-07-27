@@ -1,0 +1,10 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:Workflow" "base:TriggeredLOI" "base:LineOfInquiry" "base:Hypothesis" "base:Graph" ; /*classes style*/
+	"base:Hypothesis" -> "base:Graph" [ label = "rdfs:subClassOf" ];
+	"base:TriggeredLOI" -> "base:LineOfInquiry" [ label = "rdfs:subClassOf" ];
+	"base:LineOfInquiry" -> "base:Graph" [ label = "rdfs:subClassOf" ];
+	"base:Workflow" -> "base:Graph" [ label = "rdfs:subClassOf" ];
+
+}

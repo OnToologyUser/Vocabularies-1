@@ -1,0 +1,56 @@
+<http://disk-project.org/ontology/omics#EGFR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://disk-project.org/ontology/omics#EGFR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://disk-project.org/ontology/omics#Protein> .
+<http://disk-project.org/ontology/omics#collectedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://disk-project.org/ontology/omics#collectedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/omics#Tissue> .
+<http://disk-project.org/ontology/omics#collectedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/omics#Gene> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/omics#collectedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/omics#Tissue> .
+<http://disk-project.org/ontology/omics#collectedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/omics#Patient> .
+<http://disk-project.org/ontology/omics#collectedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/omics#ColonCancer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://disk-project.org/ontology/omics#ColonCancer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://disk-project.org/ontology/omics#Cancer> .
+<http://disk-project.org/ontology/omics#Diagnosis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/omics#hasDiagnosis> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/omics#Patient> .
+<http://disk-project.org/ontology/omics#hasDiagnosis> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/omics#Diagnosis> .
+<http://disk-project.org/ontology/omics#hasDiagnosis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/omics#diagnosedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://disk-project.org/ontology/omics#diagnosedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/omics#Diagnosis> .
+<http://disk-project.org/ontology/omics#diagnosedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://disk-project.org/ontology/omics#HNF4a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://disk-project.org/ontology/omics#HNF4a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://disk-project.org/ontology/omics#Gene> .
+<http://disk-project.org/ontology/omics> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.disk-project.org/ontology/omics/omics-1.0.0.owl#UPDATE> .
+<http://disk-project.org/ontology/omics> <http://www.w3.org/2000/01/rdf-schema#comment> "The omics vocabulary introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc.  "@en .
+<http://disk-project.org/ontology/omics> <http://purl.org/vocab/vann/preferredNamespacePrefix> "omics" .
+<http://disk-project.org/ontology/omics> <http://purl.org/dc/elements/1.1/description> "The omics vocabulary introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc.  "@en .
+<http://disk-project.org/ontology/omics> <http://purl.org/dc/elements/1.1/title> "The Disk-omics Ontology"@en .
+<http://disk-project.org/ontology/omics> <http://purl.org/dc/terms/abstract> "The omics vocabulary introduces a set of terms for referring to biology terms that are referred to in hypothesis: proteins, patients, tissues, etc.  "@en .
+<http://disk-project.org/ontology/omics> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> .
+<http://disk-project.org/ontology/omics> <http://purl.org/dc/elements/1.1/contributor> "Yolanda Gil" .
+<http://disk-project.org/ontology/omics> <http://purl.org/dc/elements/1.1/contributor> "Daniel Garijo" .
+<http://disk-project.org/ontology/omics> <http://purl.org/dc/elements/1.1/created> "2016-03-24T20:18:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://disk-project.org/ontology/omics> <http://purl.org/dc/elements/1.1/creator> "Varun Ratnakar" .
+<http://disk-project.org/ontology/omics> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0 First Draft" .
+<http://disk-project.org/ontology/omics> <http://purl.org/vocab/vann/preferredNamespaceUri> <http://disk-project.org/ontology/omics> .
+<http://disk-project.org/ontology/omics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://disk-project.org/ontology/omics#Tissue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/omics#MassSpecData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://disk-project.org/ontology/disk#Data> .
+<http://disk-project.org/ontology/omics#MassSpecData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/omics#ColonCancerDummySubtype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://disk-project.org/ontology/omics#ColonCancerDummySubtype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://disk-project.org/ontology/omics#Cancer> .
+<http://disk-project.org/ontology/omics#Experiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/omics#producedData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/omics#Experiment> .
+<http://disk-project.org/ontology/omics#producedData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/omics#Patient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/omics#experimentedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/omics#Tissue> .
+<http://disk-project.org/ontology/omics#experimentedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/omics#Experiment> .
+<http://disk-project.org/ontology/omics#experimentedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/omics#Protein> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/omics#DummyProtein> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://disk-project.org/ontology/omics#DummyProtein> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://disk-project.org/ontology/omics#Protein> .
+<http://disk-project.org/ontology/disk#Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/omics#Cancer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://disk-project.org/ontology/omics#KRAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://disk-project.org/ontology/omics#KRAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://disk-project.org/ontology/omics#Protein> .
+<http://disk-project.org/ontology/omics#isDiagnosedWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://disk-project.org/ontology/omics#Diagnosis> .
+<http://disk-project.org/ontology/omics#isDiagnosedWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://disk-project.org/ontology/omics#Cancer> .
+<http://disk-project.org/ontology/omics#isDiagnosedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
