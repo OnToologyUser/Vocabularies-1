@@ -6,13 +6,6 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:vann="http://purl.org/vocab/vann/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
-  <rdf:Description rdf:about="http://linked.earth/ontology#grantNumber">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Funding"/>
-    <rdfs:comment xml:lang="en">The grant number associated with the development of the Dataset?</rdfs:comment>
-    <rdfs:label xml:lang="en">grantNumber</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#Uncertainty">
     <rdfs:isDefinedBy rdf:resource="https://www.ipcc.ch/pdf/assessment-report/ar5/wg1/WG1AR5_AnnexIII_FINAL.pdf"/>
     <rdfs:comment xml:lang="en">A state of incomplete knowledge that can result from a lack of information or from disagreement about what is known or  even knowable. Uncertainty may come from many sources, from imprecision in the data to ambigously defined concepts or terminology, or uncertain projections of human bahavior. Uncertainty can be represented by quantitative measures (e.g., probability density function) or by qualitative statement (e.g., reflecting the judgement of a team of experts. Sensu IPCC AR5</rdfs:comment>
@@ -26,26 +19,14 @@
     <rdfs:label xml:lang="en">detail</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <owl:unionOf rdf:nodeID="A1"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
     <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <rdf:rest rdf:nodeID="A3"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#CalibrationModel"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#hasDOI">
-    <rdfs:domain rdf:nodeID="A4"/>
+    <rdfs:domain rdf:nodeID="A0"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
     <rdfs:comment xml:lang="en">As Digital Object Identifier for a given resource. For example: "oi:10.1191/095968301673881493"</rdfs:comment>
@@ -53,15 +34,9 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Variable"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#IsotopeInterpretation">
-    <rdfs:comment>A suite of metadata that describe how a MeasuredVariable with instance Isotope is interpreted to reflect past variability, including environmental variability</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Interpretation"/>
-    <rdfs:label xml:lang="en">IsotopeInterpretation</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:nodeID="A2"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Uncertainty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#notes">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -71,6 +46,480 @@
     <rdfs:comment xml:lang="en">Notes regarding the cells in the DataTable</rdfs:comment>
     <rdfs:label xml:lang="en">notes</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#ClimateInterpretation">
+    <rdfs:comment>A suite of metadata that describe how a variable is interpreted to reflect past environmental variability</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Interpretation"/>
+    <rdfs:label xml:lang="en">ClimateInterpretation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#Interpretation">
+    <rdfs:comment xml:lang="en">A suite of metadata that describe how a variable is interpreted to reflect past variability, including environmental variability</rdfs:comment>
+    <rdfs:label xml:lang="en">Interpretation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#calibrationReferences">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#Publication"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#CalibrationModel"/>
+    <rdfs:comment xml:lang="en">The publication that describes the calibration. The string should follow the model set in the publication class</rdfs:comment>
+    <rdfs:label xml:lang="en">calibrationReferences</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#chronModeledBy">
+    <rdfs:domain rdf:nodeID="A3"/>
+    <rdfs:subPropertyOf rdf:resource="http://linked.earth/ontology#modeledBy"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#ChronModel"/>
+    <rdfs:comment xml:lang="en">How was the chron data modeled?</rdfs:comment>
+    <rdfs:label xml:lang="en">chronModeledBy</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#Person">
+    <rdfs:comment xml:lang="en">A person that has participated directly or indirectly in the authoring or contribution of any resources in  Linked Earth.</rdfs:comment>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:label xml:lang="en">Person</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#Publication">
+    <rdfs:comment xml:lang="en">A document that serves as reference for a Dataset or its components</rdfs:comment>
+    <rdfs:label xml:lang="en">Publication</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#InorganicSensor">
+    <rdfs:comment xml:lang="en">An inorganic senso like.karst system, catchment basin, etc.</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://linked.earth/ontology#OrganicSensor"/>
+    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Sensor"/>
+    <rdfs:label xml:lang="en">InorganicSensor</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#MeasuredVariable">
+    <rdfs:comment xml:lang="en">Is the variable measured with an instrument?</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Variable"/>
+    <rdfs:label xml:lang="en">MeasuredVariable</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#ChronModel">
+    <rdfs:comment xml:lang="en">Model used to obtain the chronology</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Model"/>
+    <rdfs:label xml:lang="en">ChronModel</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.cefns.nau.edu/~npm4/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#SensorModel">
+    <rdfs:isDefinedBy rdf:resource="http://www.sciencedirect.com/science/article/pii/S0277379113002011"/>
+    <rdfs:comment xml:lang="en">A formalization of the behavior of the sensor in response to environmental forcing. Sensu Evans et al. 2013.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Model"/>
+    <rdfs:label xml:lang="en">SensorModel</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#DataTable">
+    <rdfs:comment xml:lang="en">A set of Variables organized in columns</rdfs:comment>
+    <rdfs:label xml:lang="en">DataTable</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#paleoModeledBy">
+    <rdfs:domain rdf:nodeID="A4"/>
+    <rdfs:subPropertyOf rdf:resource="http://linked.earth/ontology#modeledBy"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#PaleoModel"/>
+    <rdfs:comment xml:lang="en">How was the paleoData modeled?</rdfs:comment>
+    <rdfs:label xml:lang="en">paleoModeledBy</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:nodeID="A6"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#modeledBy">
+    <rdfs:domain rdf:nodeID="A7"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#Model"/>
+    <rdfs:comment xml:lang="en">How was the process modeled?</rdfs:comment>
+    <rdfs:label xml:lang="en">modeledBy</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#ProxySystemModel">
+    <rdfs:isDefinedBy rdf:resource="http://www.sciencedirect.com/science/article/pii/S0277379113002011"/>
+    <rdfs:comment xml:lang="en">In the Evans et al. (2013) framework, this is the combination of sensor, archive and observation models . "A generalized proxy system model encapuslates a simplified representation of prior physical, chemical, biological, and/or geological understanding of the ways in which environmental variation ultimately results in the observations used to retrieve paleoclimatic information."</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Model"/>
+    <rdfs:label xml:lang="en">ProxySystemModel</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#hasPart">
+    <rdfs:range rdf:nodeID="A8"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#ProxySystemModel"/>
+    <rdfs:comment>What are the components of the ProxySystemModel?</rdfs:comment>
+    <rdfs:label xml:lang="en">hasPart</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:rest rdf:nodeID="A10"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
+    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#hasFileName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#DataTable"/>
+    <rdfs:comment xml:lang="en">Name of the CSV file containing the data table</rdfs:comment>
+    <rdfs:label xml:lang="en">hasFileName</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#sensorGenus">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#OrganicSensor"/>
+    <rdfs:comment>The Genus of the sensor</rdfs:comment>
+    <rdfs:label xml:lang="en">sensorGenus</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#hasUncertainty">
+    <rdfs:domain rdf:nodeID="A11"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#Uncertainty"/>
+    <rdfs:comment xml:lang="en">What is the Uncertainty associated with the Observations, Model, and Calibration?</rdfs:comment>
+    <rdfs:label xml:lang="en">hasUncertainty</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#ArchiveModel">
+    <rdfs:isDefinedBy rdf:resource="http://www.sciencedirect.com/science/article/pii/S0277379113002011"/>
+    <rdfs:comment xml:lang="en">A simplified description of how the sensor either creates or emplaces the signal into the archive. sensu Evans et al. 2013.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Model"/>
+    <rdfs:label xml:lang="en">ArchiveModel</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#contributor">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/contributor"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#Person"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Dataset"/>
+    <rdfs:comment xml:lang="en">Contributor of the resource (dataset, publication, etc.)</rdfs:comment>
+    <rdfs:label xml:lang="en">contributor</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
+    <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <owl:unionOf rdf:nodeID="A5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:rest rdf:nodeID="A1"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Resolution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+    <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/references">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#foundInSummaryTable">
+    <rdfs:subPropertyOf rdf:resource="http://linked.earth/ontology#foundInTable"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#SummaryTable"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#ChronModel"/>
+    <rdfs:comment xml:lang="en">Property that indicates that the describer data or variable was found in a summary table</rdfs:comment>
+    <rdfs:label xml:lang="en">foundInSummaryTable</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Variable"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:rest rdf:nodeID="A15"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Archive"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#fundedBy">
+    <rdfs:range rdf:resource="http://linked.earth/ontology#Funding"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Dataset"/>
+    <rdfs:comment xml:lang="en">Property that indicated the funding which made the dataset possible</rdfs:comment>
+    <rdfs:label xml:lang="en">fundedBy</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#collectedFrom">
+    <rdfs:range rdf:resource="http://linked.earth/ontology#Location"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Dataset"/>
+    <rdfs:comment xml:lang="en">Where was the data in the dataset collected from? Generally, this is the site where the archive was collected. </rdfs:comment>
+    <rdfs:label xml:lang="en">collectedFrom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#book">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Publication"/>
+    <rdfs:comment xml:lang="en">Book in which the publication was published</rdfs:comment>
+    <rdfs:label xml:lang="en">book</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:unionOf rdf:nodeID="A16"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#foundInTable">
+    <rdfs:domain rdf:nodeID="A17"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#DataTable"/>
+    <rdfs:comment xml:lang="en">Property that indicated the table where the described data can be found</rdfs:comment>
+    <rdfs:label xml:lang="en">foundInTable</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#hasResolution">
+    <rdfs:range rdf:resource="http://linked.earth/ontology#Resolution"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Archive"/>
+    <rdfs:comment>What is the Resolution of the Archive?</rdfs:comment>
+    <rdfs:label xml:lang="en">hasResolution</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <owl:unionOf rdf:nodeID="A18"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:unionOf rdf:nodeID="A19"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/bibliographicCitation">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#includesChronData">
+    <rdfs:subPropertyOf rdf:resource="http://linked.earth/ontology#includesData"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Dataset"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#ChronData"/>
+    <rdfs:comment xml:lang="en">Pointer to the chron data included in the dataset</rdfs:comment>
+    <rdfs:label xml:lang="en">includesChronData</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <owl:unionOf rdf:nodeID="A9"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#relevantQuote">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://linked.earth/ontology#description"/>
+    <rdfs:comment>Relevant summary or preferably quotation from the referenced Publication</rdfs:comment>
+    <rdfs:label xml:lang="en">relevantQuote</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#citation">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/bibliographicCitation"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Publication"/>
+    <rdfs:comment xml:lang="en">Sentence indicating how a paper should be published</rdfs:comment>
+    <rdfs:label xml:lang="en">citation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#foundInMeasurementTable">
+    <rdfs:subPropertyOf rdf:resource="http://linked.earth/ontology#foundInTable"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#MeasurementTable"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Data"/>
+    <rdfs:comment xml:lang="en">Property that indicates that a variable was found in a measurement table</rdfs:comment>
+    <rdfs:label xml:lang="en">foundInMeasurementTable</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#title">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Publication"/>
+    <rdfs:comment xml:lang="en">Title of a publication</rdfs:comment>
+    <rdfs:label xml:lang="en">title</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#publishedIn">
+    <rdfs:range rdf:resource="http://linked.earth/ontology#Publication"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Dataset"/>
+    <rdfs:comment xml:lang="en">Where was the Dataset published? Property that relates a dataset to the publication where it was published.</rdfs:comment>
+    <rdfs:label xml:lang="en">publishedIn</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#Funding">
+    <rdfs:comment xml:lang="en">A source of funding for the creation of the Dataset</rdfs:comment>
+    <rdfs:label xml:lang="en">Funding</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <rdf:rest rdf:nodeID="A21"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#CalibrationModel"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#ChronData"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#Model">
+    <rdfs:comment xml:lang="en">Any system that is at least partially isomorphic to some target system and used to derive information about the structure and/or dynamics of the target system.</rdfs:comment>
+    <rdfs:label xml:lang="en">Model</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#">
+    <dcterms:creator rdf:resource="http://www.cefns.nau.edu/~npm4/"/>
+    <dcterms:contributor rdf:resource="http://www.isi.edu/~gil/"/>
+    <vann:preferredNamespacePrefix>le</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>http://linked.earth/ontology#</vann:preferredNamespaceUri>
+    <owl:versionInfo xml:lang="en">1.0.0</owl:versionInfo>
+    <dcterms:creator rdf:resource="http://orcid.org/0000-0001-5920-4751"/>
+    <dcterms:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</dcterms:license>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdfs:comment xml:lang="en">The Linked Earth Ontology aims to provide a common vocabulary for annotating paleoclimatology data</rdfs:comment>
+    <dcterms:contributor rdf:resource="http://w3id.org/people/dgarijo"/>
+    <dcterms:title xml:lang="en">The Linked Earth Ontology</dcterms:title>
+    <dcterms:title>The Linked Earth Ontology</dcterms:title>
+    <dcterms:creator rdf:resource="http://earth.usc.edu/~khider/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#interpretedAs">
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Variable"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#Interpretation"/>
+    <rdfs:comment xml:lang="en">how is the variable interpreted?</rdfs:comment>
+    <rdfs:label xml:lang="en">interpretedAs</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <rdf:rest rdf:nodeID="A23"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Instrument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#modelReferences">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#Publication"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Model"/>
+    <rdfs:comment xml:lang="en">The publication that describes the model. </rdfs:comment>
+    <rdfs:label xml:lang="en">modelReferences</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://orcid.org/0000-0001-5920-4751">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#SummaryTable">
+    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#DataTable"/>
+    <rdfs:label xml:lang="en">Table containing relevant statistics from the ensemble table</rdfs:label>
+    <rdfs:label xml:lang="en">SummaryTable</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#Location">
+    <rdfs:comment xml:lang="en">The geographic data and metadata for the dataset</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    <rdfs:label xml:lang="en">Location</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:rest rdf:nodeID="A22"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Model"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#fundingCountry">
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Funding"/>
+    <rdfs:comment xml:lang="en">Country which awarded the funding for the dataset</rdfs:comment>
+    <rdfs:label xml:lang="en">fundingCountry</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#UncertaintyModel">
+    <rdfs:comment xml:lang="en">A formalization of the way the uncertainty is accounted for</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Model"/>
+    <rdfs:label xml:lang="en">UncertaintyModel</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#InferredVariable">
+    <rdfs:comment xml:lang="en">Is the variable inferred from a measured variable?</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://linked.earth/ontology#MeasuredVariable"/>
+    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Variable"/>
+    <rdfs:label xml:lang="en">InferredVariable</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#PeerReviewedPublication">
+    <rdfs:comment xml:lang="en">A publication that has undergone a formal peer-reviewed process.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Publication"/>
+    <rdfs:label xml:lang="en">PeerReviewedPublication</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <rdf:rest rdf:nodeID="A24"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Model"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#description">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">The description of a resource. This property may be used to provide further details on instrument descriptions, uncertainty description,etc.</rdfs:comment>
+    <rdfs:label xml:lang="en">description</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#hasID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Variable"/>
+    <rdfs:comment xml:lang="en">ID for a variable in a table</rdfs:comment>
+    <rdfs:label xml:lang="en">hasID</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#grantNumber">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Funding"/>
+    <rdfs:comment xml:lang="en">The grant number associated with the development of the Dataset?</rdfs:comment>
+    <rdfs:label xml:lang="en">grantNumber</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <owl:unionOf rdf:nodeID="A26"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#IsotopeInterpretation">
+    <rdfs:comment>A suite of metadata that describe how a MeasuredVariable with instance Isotope is interpreted to reflect past variability, including environmental variability</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Interpretation"/>
+    <rdfs:label xml:lang="en">IsotopeInterpretation</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:unionOf rdf:nodeID="A27"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#hasISBN">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -94,6 +543,15 @@
     <rdfs:label xml:lang="en">seasonality</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#hasLink">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:comment xml:lang="en">A downloadable link of a resource</rdfs:comment>
+    <rdfs:label xml:lang="en">hasLink</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal">
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#publicationYear">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/created"/>
@@ -103,34 +561,18 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Literal">
-    <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#hasLink">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-    <rdfs:comment xml:lang="en">A downloadable link of a resource</rdfs:comment>
-    <rdfs:label xml:lang="en">hasLink</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#ClimateProxy">
     <rdfs:comment xml:lang="en">Climate observations prior to the instrumental era are necessarily indirect. These observations are made on climate proxies in various geological (e.g. lake or marine sediments, living or fossil coral reefs, cave deposits), glaciological (ice cores or snow pits) or biological (trees) archives. Many types of measurements can be made on each archives, each sensing a different aspect of the environment (sometimes, several aspects at once). A paleoclimate dataset is a set of observations made on an archive.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Proxy"/>
     <rdfs:label xml:lang="en">ClimateProxy</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#ClimateInterpretation">
-    <rdfs:comment>A suite of metadata that describe how a variable is interpreted to reflect past environmental variability</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Interpretation"/>
-    <rdfs:label xml:lang="en">ClimateInterpretation</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#Interpretation">
-    <rdfs:comment xml:lang="en">A suite of metadata that describe how a variable is interpreted to reflect past variability, including environmental variability</rdfs:comment>
-    <rdfs:label xml:lang="en">Interpretation</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:nodeID="A28">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Variable"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#foundInDistributionTable">
-    <rdfs:domain rdf:nodeID="A6"/>
+    <rdfs:domain rdf:nodeID="A29"/>
     <rdfs:subPropertyOf rdf:resource="http://linked.earth/ontology#foundInTable"/>
     <rdfs:range rdf:resource="http://linked.earth/ontology#DistributionTable"/>
     <rdfs:comment xml:lang="en">Property that indicates that a variable or data is found in a distribution table</rdfs:comment>
@@ -138,26 +580,14 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Observation"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <owl:unionOf rdf:nodeID="A9"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:nodeID="A16">
+    <rdf:rest rdf:nodeID="A30"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Dataset"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#Proxy">
     <rdfs:comment xml:lang="en">a measured variable used to infer the value of a variable of interest</rdfs:comment>
     <rdfs:label xml:lang="en">Proxy</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#calibrationReferences">
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#Publication"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#CalibrationModel"/>
-    <rdfs:comment xml:lang="en">The publication that describes the calibration. The string should follow the model set in the publication class</rdfs:comment>
-    <rdfs:label xml:lang="en">calibrationReferences</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#EnsembleTable">
     <rdfs:comment xml:lang="en">Table containing possible series of age models or proxy variability</rdfs:comment>
@@ -165,13 +595,9 @@
     <rdfs:label xml:lang="en">EnsembleTable</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A10">
-    <rdf:rest rdf:nodeID="A11"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#ChronModel"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A12">
-    <owl:unionOf rdf:nodeID="A2"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:nodeID="A31">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#PaleoModel"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#isLocal">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -180,10 +606,6 @@
     <rdfs:label xml:lang="en">isLocal</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <rdf:rest rdf:nodeID="A13"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Uncertainty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#Sensor">
     <rdfs:isDefinedBy rdf:resource="http://www.sciencedirect.com/science/article/pii/S0277379113002011"/>
@@ -199,36 +621,9 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#Person">
-    <rdfs:comment xml:lang="en">A person that has participated directly or indirectly in the authoring or contribution of any resources in  Linked Earth.</rdfs:comment>
-    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <rdfs:label xml:lang="en">Person</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#chronModeledBy">
-    <rdfs:domain rdf:nodeID="A14"/>
-    <rdfs:subPropertyOf rdf:resource="http://linked.earth/ontology#modeledBy"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#ChronModel"/>
-    <rdfs:comment xml:lang="en">How was the chron data modeled?</rdfs:comment>
-    <rdfs:label xml:lang="en">chronModeledBy</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A15">
-    <rdf:rest rdf:nodeID="A5"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Uncertainty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#Publication">
-    <rdfs:comment xml:lang="en">A document that serves as reference for a Dataset or its components</rdfs:comment>
-    <rdfs:label xml:lang="en">Publication</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:nodeID="A24">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Variable"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#observedAs">
     <rdfs:domain rdf:resource="http://linked.earth/ontology#Proxy"/>
@@ -237,24 +632,19 @@
     <rdfs:label xml:lang="en">observedAs</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#InorganicSensor">
-    <rdfs:comment xml:lang="en">An inorganic senso like.karst system, catchment basin, etc.</rdfs:comment>
-    <owl:disjointWith rdf:resource="http://linked.earth/ontology#OrganicSensor"/>
-    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Sensor"/>
-    <rdfs:label xml:lang="en">InorganicSensor</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#CalibrationModel">
     <rdfs:comment xml:lang="en">Metadata about how the variable was calibrated to reflect an environmental variable</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Model"/>
     <rdfs:label xml:lang="en">CalibrationModel</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#MeasuredVariable">
-    <rdfs:comment xml:lang="en">Is the variable measured with an instrument?</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Variable"/>
-    <rdfs:label xml:lang="en">MeasuredVariable</rdfs:label>
+  <rdf:Description rdf:nodeID="A8">
+    <owl:unionOf rdf:nodeID="A32"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <rdf:rest rdf:nodeID="A33"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Publication"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#calibratedWith">
     <rdfs:domain rdf:resource="http://linked.earth/ontology#InferredVariable"/>
@@ -263,17 +653,8 @@
     <rdfs:label xml:lang="en">calibratedWith</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.cefns.nau.edu/~npm4/">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#ChronModel">
-    <rdfs:comment xml:lang="en">Model used to obtain the chronology</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Model"/>
-    <rdfs:label xml:lang="en">ChronModel</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#hasMissingValue">
-    <rdfs:domain rdf:nodeID="A16"/>
+    <rdfs:domain rdf:nodeID="A34"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <owl:propertyDisjointWith rdf:resource="http://linked.earth/ontology#hasValue"/>
     <rdfs:comment xml:lang="en">Indicates how the missing values are flagged in a dataset</rdfs:comment>
@@ -295,17 +676,6 @@
     <rdfs:label xml:lang="en">Observation</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A11">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#PaleoModel"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#SensorModel">
-    <rdfs:isDefinedBy rdf:resource="http://www.sciencedirect.com/science/article/pii/S0277379113002011"/>
-    <rdfs:comment xml:lang="en">A formalization of the behavior of the sensor in response to environmental forcing. Sensu Evans et al. 2013.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Model"/>
-    <rdfs:label xml:lang="en">SensorModel</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#volume">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://linked.earth/ontology#Publication"/>
@@ -314,40 +684,16 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
-    <rdf:rest rdf:nodeID="A17"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#ArchiveModel"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.isi.edu/~gil/">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#DataTable">
-    <rdfs:comment xml:lang="en">A set of Variables organized in columns</rdfs:comment>
-    <rdfs:label xml:lang="en">DataTable</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A13">
+  <rdf:Description rdf:nodeID="A35">
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Variable"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Proxy"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A18">
-    <rdf:rest rdf:nodeID="A19"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Model"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#paleoModeledBy">
-    <rdfs:domain rdf:nodeID="A20"/>
-    <rdfs:subPropertyOf rdf:resource="http://linked.earth/ontology#modeledBy"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#PaleoModel"/>
-    <rdfs:comment xml:lang="en">How was the paleoData modeled?</rdfs:comment>
-    <rdfs:label xml:lang="en">paleoModeledBy</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#modeledBy">
-    <rdfs:domain rdf:nodeID="A21"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#Model"/>
-    <rdfs:comment xml:lang="en">How was the process modeled?</rdfs:comment>
-    <rdfs:label xml:lang="en">modeledBy</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:nodeID="A36">
+    <rdf:rest rdf:nodeID="A31"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#ChronModel"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://w3id.org/people/dgarijo">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -356,13 +702,6 @@
     <rdfs:comment xml:lang="en">An aggregation of DataTables and supporting information regarging the paleoenvironmental and/or chronological interpretation </rdfs:comment>
     <rdfs:label xml:lang="en">Data</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#measuredBy">
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#MeasuredVariable"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#Instrument"/>
-    <rdfs:comment xml:lang="en">What Instrument was used to obtain the MeasuredVariables and Observations?</rdfs:comment>
-    <rdfs:label xml:lang="en">measuredBy</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#warnings">
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
@@ -373,47 +712,24 @@
     <rdfs:label xml:lang="en">warnings</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A22">
-    <rdf:rest rdf:nodeID="A15"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Resolution"/>
+  <rdf:Description rdf:about="http://linked.earth/ontology#measuredBy">
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#MeasuredVariable"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#Instrument"/>
+    <rdfs:comment xml:lang="en">What Instrument was used to obtain the MeasuredVariables and Observations?</rdfs:comment>
+    <rdfs:label xml:lang="en">measuredBy</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#method">
-    <rdfs:domain rdf:nodeID="A23"/>
+    <rdfs:domain rdf:nodeID="A37"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:comment xml:lang="en">Method used to obtain the information from the resource</rdfs:comment>
     <rdfs:label xml:lang="en">method</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#hasPart">
-    <rdfs:range rdf:nodeID="A8"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#ProxySystemModel"/>
-    <rdfs:comment>What are the components of the ProxySystemModel?</rdfs:comment>
-    <rdfs:label xml:lang="en">hasPart</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#ProxySystemModel">
-    <rdfs:isDefinedBy rdf:resource="http://www.sciencedirect.com/science/article/pii/S0277379113002011"/>
-    <rdfs:comment xml:lang="en">In the Evans et al. (2013) framework, this is the combination of sensor, archive and observation models . "A generalized proxy system model encapuslates a simplified representation of prior physical, chemical, biological, and/or geological understanding of the ways in which environmental variation ultimately results in the observations used to retrieve paleoclimatic information."</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Model"/>
-    <rdfs:label xml:lang="en">ProxySystemModel</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#PaleoModel">
     <rdfs:comment xml:lang="en">Model describing how the measuredVariables are transformed into inferredVariables</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Model"/>
     <rdfs:label xml:lang="en">PaleoModel</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
-    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A24">
-    <rdf:rest rdf:nodeID="A25"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Model"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A20">
-    <owl:unionOf rdf:nodeID="A26"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#hasCode">
@@ -424,18 +740,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <owl:unionOf rdf:nodeID="A27"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#hasFileName">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#DataTable"/>
-    <rdfs:comment xml:lang="en">Name of the CSV file containing the data table</rdfs:comment>
-    <rdfs:label xml:lang="en">hasFileName</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#equation">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://linked.earth/ontology#Model"/>
@@ -443,19 +747,9 @@
     <rdfs:label xml:lang="en">equation</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A28">
-    <rdf:rest rdf:nodeID="A29"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Archive"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
-    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
-    <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
-    <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A30">
-    <owl:unionOf rdf:nodeID="A31"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:nodeID="A33">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#SoftwareCode"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#inferredFrom">
     <rdfs:range rdf:resource="http://linked.earth/ontology#MeasuredVariable"/>
@@ -464,39 +758,12 @@
     <rdfs:label xml:lang="en">inferredFrom</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#sensorGenus">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#OrganicSensor"/>
-    <rdfs:comment>The Genus of the sensor</rdfs:comment>
-    <rdfs:label xml:lang="en">sensorGenus</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A23">
-    <owl:unionOf rdf:nodeID="A28"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#hasExecutionEnvironment">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://linked.earth/ontology#SoftwareCode"/>
     <rdfs:comment xml:lang="en">Execution environment of the code</rdfs:comment>
     <rdfs:label xml:lang="en">hasExecutionEnvironment</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <rdf:rest rdf:nodeID="A18"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Instrument"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#hasUncertainty">
-    <rdfs:domain rdf:nodeID="A12"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#Uncertainty"/>
-    <rdfs:comment xml:lang="en">What is the Uncertainty associated with the Observations, Model, and Calibration?</rdfs:comment>
-    <rdfs:label xml:lang="en">hasUncertainty</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#SoftwareCode">
-    <rdfs:comment xml:lang="en">A script that describes the model, in any programming language (e.g., Excel, Matlab, Python, R)</rdfs:comment>
-    <rdfs:label xml:lang="en">SoftwareCode</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#datasetVersion">
     <rdfs:domain rdf:resource="http://linked.earth/ontology#Dataset"/>
@@ -505,11 +772,13 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#ArchiveModel">
-    <rdfs:isDefinedBy rdf:resource="http://www.sciencedirect.com/science/article/pii/S0277379113002011"/>
-    <rdfs:comment xml:lang="en">A simplified description of how the sensor either creates or emplaces the signal into the archive. sensu Evans et al. 2013.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Model"/>
-    <rdfs:label xml:lang="en">ArchiveModel</rdfs:label>
+  <rdf:Description rdf:nodeID="A29">
+    <owl:unionOf rdf:nodeID="A36"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#SoftwareCode">
+    <rdfs:comment xml:lang="en">A script that describes the model, in any programming language (e.g., Excel, Matlab, Python, R)</rdfs:comment>
+    <rdfs:label xml:lang="en">SoftwareCode</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#pages">
@@ -520,20 +789,9 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#contributor">
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/contributor"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#Person"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Dataset"/>
-    <rdfs:comment xml:lang="en">Contributor of the resource (dataset, publication, etc.)</rdfs:comment>
-    <rdfs:label xml:lang="en">contributor</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
-    <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  <rdf:Description rdf:nodeID="A27">
+    <rdf:rest rdf:nodeID="A35"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Data"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://schema.org/name">
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -553,40 +811,14 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A32">
-    <rdf:rest rdf:nodeID="A22"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Observation"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#Dataset">
     <rdfs:comment xml:lang="en">A structured collection of related information, including - but not limited to - geographical, chronological, and measured or modeled paleoenvironmental data</rdfs:comment>
     <rdfs:label xml:lang="en">Dataset</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
-    <rdfs:domain rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/references">
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A26">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#PaleoData"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A25">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Variable"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
-    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/spec/geosparql/1.0"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A27">
-    <rdf:rest rdf:nodeID="A33"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Dataset"/>
+  <rdf:Description rdf:nodeID="A38">
+    <rdf:rest rdf:nodeID="A28"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Model"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#IntegrationTime">
     <rdfs:comment>The integration time of the Archive or the Sensor</rdfs:comment>
@@ -595,28 +827,15 @@
     <rdfs:label xml:lang="en">IntegrationTime</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#foundInSummaryTable">
-    <rdfs:subPropertyOf rdf:resource="http://linked.earth/ontology#foundInTable"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#SummaryTable"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#ChronModel"/>
-    <rdfs:comment xml:lang="en">Property that indicates that the describer data or variable was found in a summary table</rdfs:comment>
-    <rdfs:label xml:lang="en">foundInSummaryTable</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A29">
-    <rdf:rest rdf:nodeID="A7"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Model"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#DistributionTable">
     <rdfs:comment xml:lang="en">Table that contains the probability on the inferred variables</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#DataTable"/>
     <rdfs:label xml:lang="en">DistributionTable</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A31">
-    <rdf:rest rdf:nodeID="A24"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Data"/>
+  <rdf:Description rdf:nodeID="A34">
+    <owl:unionOf rdf:nodeID="A39"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#includesPaleoData">
     <rdfs:subPropertyOf rdf:resource="http://linked.earth/ontology#includesData"/>
@@ -632,17 +851,6 @@
     <rdfs:label xml:lang="en">Archive</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#fundedBy">
-    <rdfs:range rdf:resource="http://linked.earth/ontology#Funding"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Dataset"/>
-    <rdfs:comment xml:lang="en">Property that indicated the funding which made the dataset possible</rdfs:comment>
-    <rdfs:label xml:lang="en">fundedBy</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A34">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#SoftwareCode"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#email">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://linked.earth/ontology#Person"/>
@@ -650,30 +858,13 @@
     <rdfs:label xml:lang="en">email</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A35">
-    <owl:unionOf rdf:nodeID="A32"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:nodeID="A40">
+    <rdf:rest rdf:nodeID="A38"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Data"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#collectedFrom">
-    <rdfs:range rdf:resource="http://linked.earth/ontology#Location"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Dataset"/>
-    <rdfs:comment xml:lang="en">Where was the data in the dataset collected from? Generally, this is the site where the archive was collected. </rdfs:comment>
-    <rdfs:label xml:lang="en">collectedFrom</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#book">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Publication"/>
-    <rdfs:comment xml:lang="en">Book in which the publication was published</rdfs:comment>
-    <rdfs:label xml:lang="en">book</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#includesData">
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Dataset"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#Data"/>
-    <rdfs:comment xml:lang="en">What are the paleoenvironmental and chronological Data included in the Dataset?</rdfs:comment>
-    <rdfs:label xml:lang="en">includesData</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:nodeID="A41">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#PaleoData"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#measuredOn">
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
@@ -683,19 +874,16 @@
     <rdfs:label xml:lang="en">measuredOn</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#foundInTable">
-    <rdfs:domain rdf:nodeID="A30"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#DataTable"/>
-    <rdfs:comment xml:lang="en">Property that indicated the table where the described data can be found</rdfs:comment>
-    <rdfs:label xml:lang="en">foundInTable</rdfs:label>
+  <rdf:Description rdf:about="http://linked.earth/ontology#includesData">
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Dataset"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#Data"/>
+    <rdfs:comment xml:lang="en">What are the paleoenvironmental and chronological Data included in the Dataset?</rdfs:comment>
+    <rdfs:label xml:lang="en">includesData</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#hasResolution">
-    <rdfs:range rdf:resource="http://linked.earth/ontology#Resolution"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Archive"/>
-    <rdfs:comment>What is the Resolution of the Archive?</rdfs:comment>
-    <rdfs:label xml:lang="en">hasResolution</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:nodeID="A42">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#SensorModel"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#issue">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
@@ -721,10 +909,6 @@
     <rdfs:label xml:lang="en">interpretationReferences</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A36">
-    <rdf:rest rdf:nodeID="A37"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Data"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#principalInvestigator">
     <rdfs:range rdf:resource="http://linked.earth/ontology#Person"/>
     <rdfs:domain rdf:resource="http://linked.earth/ontology#Funding"/>
@@ -732,61 +916,34 @@
     <rdfs:label xml:lang="en">principalInvestigator</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <owl:unionOf rdf:nodeID="A38"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A14">
-    <owl:unionOf rdf:nodeID="A39"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#Variable">
     <rdfs:comment xml:lang="en">Quantities which can be measured or inferred independently in an experiment</rdfs:comment>
     <rdfs:label xml:lang="en">Variable</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <owl:unionOf rdf:nodeID="A14"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <rdf:rest rdf:nodeID="A13"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Uncertainty"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#Feature">
     <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#includesChronData">
-    <rdfs:subPropertyOf rdf:resource="http://linked.earth/ontology#includesData"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Dataset"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#ChronData"/>
-    <rdfs:comment xml:lang="en">Pointer to the chron data included in the dataset</rdfs:comment>
-    <rdfs:label xml:lang="en">includesChronData</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/bibliographicCitation">
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#hasUnits">
-    <rdfs:domain rdf:nodeID="A35"/>
+    <rdfs:domain rdf:nodeID="A20"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:comment xml:lang="en">units in which a resource is measured The resource can be a Variable, an Observation, a Resolution, or an Uncertainty</rdfs:comment>
     <rdfs:label xml:lang="en">hasUnits</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A40">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Variable"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#relevantQuote">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:subPropertyOf rdf:resource="http://linked.earth/ontology#description"/>
-    <rdfs:comment>Relevant summary or preferably quotation from the referenced Publication</rdfs:comment>
-    <rdfs:label xml:lang="en">relevantQuote</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#citation">
-    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/bibliographicCitation"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Publication"/>
-    <rdfs:comment xml:lang="en">Sentence indicating how a paper should be published</rdfs:comment>
-    <rdfs:label xml:lang="en">citation</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  <rdf:Description rdf:nodeID="A17">
+    <owl:unionOf rdf:nodeID="A40"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#basedOn">
     <rdfs:range rdf:resource="http://linked.earth/ontology#Proxy"/>
@@ -795,13 +952,9 @@
     <rdfs:label xml:lang="en">basedOn</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#author">
-    <rdfs:domain rdf:nodeID="A41"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/creator"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#Person"/>
-    <rdfs:comment xml:lang="en">Author of the resource</rdfs:comment>
-    <rdfs:label xml:lang="en">author</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:unionOf rdf:nodeID="A41"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#journal">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -810,12 +963,12 @@
     <rdfs:label xml:lang="en">journal</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#foundInMeasurementTable">
-    <rdfs:subPropertyOf rdf:resource="http://linked.earth/ontology#foundInTable"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#MeasurementTable"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Data"/>
-    <rdfs:comment xml:lang="en">Property that indicates that a variable was found in a measurement table</rdfs:comment>
-    <rdfs:label xml:lang="en">foundInMeasurementTable</rdfs:label>
+  <rdf:Description rdf:about="http://linked.earth/ontology#author">
+    <rdfs:domain rdf:nodeID="A12"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/creator"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#Person"/>
+    <rdfs:comment xml:lang="en">Author of the resource</rdfs:comment>
+    <rdfs:label xml:lang="en">author</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#ChronDataTable">
@@ -825,17 +978,6 @@
     <rdfs:label xml:lang="en">ChronDataTable</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A33">
-    <rdf:rest rdf:nodeID="A34"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Publication"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#NonPeerReviewedPublication">
-    <rdfs:comment xml:lang="en">A publication that has not undergone a formal review process; for instance, a Dataset attached to a dissertation.</rdfs:comment>
-    <owl:disjointWith rdf:resource="http://linked.earth/ontology#PeerReviewedPublication"/>
-    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Publication"/>
-    <rdfs:label xml:lang="en">NonPeerReviewedPublication</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#hasExecutionCommand">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://linked.earth/ontology#SoftwareCode"/>
@@ -843,13 +985,12 @@
     <rdfs:label xml:lang="en">hasExecutionCommand</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#title">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Publication"/>
-    <rdfs:comment xml:lang="en">Title of a publication</rdfs:comment>
-    <rdfs:label xml:lang="en">title</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  <rdf:Description rdf:about="http://linked.earth/ontology#NonPeerReviewedPublication">
+    <rdfs:comment xml:lang="en">A publication that has not undergone a formal review process; for instance, a Dataset attached to a dissertation.</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://linked.earth/ontology#PeerReviewedPublication"/>
+    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Publication"/>
+    <rdfs:label xml:lang="en">NonPeerReviewedPublication</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#MeasurementTable">
     <rdfs:comment xml:lang="en">Table that contains the measuredVariables made on the Archive</rdfs:comment>
@@ -864,27 +1005,15 @@
     <rdfs:label xml:lang="en">sensorSpecies</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#publishedIn">
-    <rdfs:range rdf:resource="http://linked.earth/ontology#Publication"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Dataset"/>
-    <rdfs:comment xml:lang="en">Where was the Dataset published? Property that relates a dataset to the publication where it was published.</rdfs:comment>
-    <rdfs:label xml:lang="en">publishedIn</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#Funding">
-    <rdfs:comment xml:lang="en">A source of funding for the creation of the Dataset</rdfs:comment>
-    <rdfs:label xml:lang="en">Funding</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Publication"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#PaleoData">
     <rdfs:comment xml:lang="en">The Data pertaining to past environmental variability</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Data"/>
     <rdfs:label xml:lang="en">PaleoData</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A37">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Proxy"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#interpretationDirection">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -894,20 +1023,8 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A41">
-    <owl:unionOf rdf:nodeID="A42"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A39">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#ChronData"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A38">
-    <rdf:rest rdf:nodeID="A43"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#ChronModel"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#foundInEnsembleTable">
-    <rdfs:domain rdf:nodeID="A44"/>
+    <rdfs:domain rdf:nodeID="A25"/>
     <rdfs:subPropertyOf rdf:resource="http://linked.earth/ontology#foundInTable"/>
     <rdfs:range rdf:resource="http://linked.earth/ontology#EnsembleTable"/>
     <rdfs:comment xml:lang="en">Property that indicates that the data or variable described was found in an ensemble table</rdfs:comment>
@@ -926,26 +1043,13 @@
     <rdfs:label xml:lang="en">Resolution</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#Model">
-    <rdfs:comment xml:lang="en">Any system that is at least partially isomorphic to some target system and used to derive information about the structure and/or dynamics of the target system.</rdfs:comment>
-    <rdfs:label xml:lang="en">Model</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:nodeID="A43">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Variable"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#">
-    <dcterms:creator rdf:resource="http://www.cefns.nau.edu/~npm4/"/>
-    <dcterms:contributor rdf:resource="http://www.isi.edu/~gil/"/>
-    <vann:preferredNamespacePrefix>le</vann:preferredNamespacePrefix>
-    <vann:preferredNamespaceUri>http://linked.earth/ontology#</vann:preferredNamespaceUri>
-    <owl:versionInfo xml:lang="en">1.0.0</owl:versionInfo>
-    <dcterms:creator rdf:resource="http://orcid.org/0000-0001-5920-4751"/>
-    <dcterms:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</dcterms:license>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <rdfs:comment xml:lang="en">The Linked Earth Ontology aims to provide a common vocabulary for annotating paleoclimatology data</rdfs:comment>
-    <dcterms:contributor rdf:resource="http://w3id.org/people/dgarijo"/>
-    <dcterms:title xml:lang="en">The Linked Earth Ontology</dcterms:title>
-    <dcterms:title>The Linked Earth Ontology</dcterms:title>
-    <dcterms:creator rdf:resource="http://earth.usc.edu/~khider/"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  <rdf:Description rdf:nodeID="A44">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#PaleoModel"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#archivedIn">
     <rdfs:domain rdf:resource="http://linked.earth/ontology#Proxy"/>
@@ -959,15 +1063,11 @@
     <rdfs:label xml:lang="en">Instrument</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A45">
-    <rdf:rest rdf:nodeID="A40"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Uncertainty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#asWKT">
-    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql#"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  <rdf:Description rdf:about="http://linked.earth/ontology#ChronProxy">
+    <rdfs:comment xml:lang="en">The data and metadata associated with how the chronology information was obtained.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Proxy"/>
+    <rdfs:label xml:lang="en">ChronProxy</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#ObservationModel">
     <rdfs:isDefinedBy rdf:resource="http://www.sciencedirect.com/science/article/pii/S0277379113002011"/>
@@ -976,90 +1076,30 @@
     <rdfs:label xml:lang="en">ObservationModel</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#ChronProxy">
-    <rdfs:comment xml:lang="en">The data and metadata associated with how the chronology information was obtained.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Proxy"/>
-    <rdfs:label xml:lang="en">ChronProxy</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#hasValue">
-    <rdfs:domain rdf:nodeID="A0"/>
+    <rdfs:domain rdf:nodeID="A45"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:comment xml:lang="en">A column of values for the variable. The literal can be in the form of a vector of values (for instance d18O PaleoObservations),  a vector of strings (for instance different paleoArchiveNames),  a matrix or both</rdfs:comment>
     <rdfs:label xml:lang="en">hasValue</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A43">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#PaleoModel"/>
+  <rdf:Description rdf:nodeID="A46">
+    <rdf:rest rdf:nodeID="A43"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#Uncertainty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#interpretedAs">
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Variable"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#Interpretation"/>
-    <rdfs:comment xml:lang="en">how is the variable interpreted?</rdfs:comment>
-    <rdfs:label xml:lang="en">interpretedAs</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A19">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Variable"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#modelReferences">
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#Publication"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Model"/>
-    <rdfs:comment xml:lang="en">The publication that describes the model. </rdfs:comment>
-    <rdfs:label xml:lang="en">modelReferences</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A17">
-    <rdf:rest rdf:nodeID="A46"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#ObservationModel"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://orcid.org/0000-0001-5920-4751">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#SummaryTable">
-    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#DataTable"/>
-    <rdfs:label xml:lang="en">Table containing relevant statistics from the ensemble table</rdfs:label>
-    <rdfs:label xml:lang="en">SummaryTable</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A42">
+  <rdf:Description rdf:nodeID="A32">
     <rdf:rest rdf:nodeID="A47"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Dataset"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#ArchiveModel"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#Location">
-    <rdfs:comment xml:lang="en">The geographic data and metadata for the dataset</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
-    <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
-    <rdfs:label xml:lang="en">Location</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
-    <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A16">
-    <owl:unionOf rdf:nodeID="A45"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  <rdf:Description rdf:nodeID="A26">
+    <rdf:rest rdf:nodeID="A44"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#ChronModel"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#ChronData">
     <rdfs:comment xml:lang="en">The Data pertaining to chronological information</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Data"/>
     <rdfs:label xml:lang="en">CrhonData</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#fundingCountry">
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Funding"/>
-    <rdfs:comment xml:lang="en">Country which awarded the funding for the dataset</rdfs:comment>
-    <rdfs:label xml:lang="en">fundingCountry</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
@@ -1072,38 +1112,19 @@
     <rdfs:label xml:lang="en">sensingWith</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#UncertaintyModel">
-    <rdfs:comment xml:lang="en">A formalization of the way the uncertainty is accounted for</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Model"/>
-    <rdfs:label xml:lang="en">UncertaintyModel</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#InferredVariable">
-    <rdfs:comment xml:lang="en">Is the variable inferred from a measured variable?</rdfs:comment>
-    <owl:disjointWith rdf:resource="http://linked.earth/ontology#MeasuredVariable"/>
-    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Variable"/>
-    <rdfs:label xml:lang="en">InferredVariable</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A46">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#SensorModel"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#PeerReviewedPublication">
-    <rdfs:comment xml:lang="en">A publication that has undergone a formal peer-reviewed process.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Publication"/>
-    <rdfs:label xml:lang="en">PeerReviewedPublication</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#OrganicSensor">
     <rdfs:comment xml:lang="en">An organic sensor (e.g., foraminifera, tree, corals...)</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://linked.earth/ontology#Sensor"/>
     <rdfs:label xml:lang="en">OrganicSensor</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A44">
-    <owl:unionOf rdf:nodeID="A10"/>
+  <rdf:Description rdf:nodeID="A45">
+    <owl:unionOf rdf:nodeID="A46"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <rdf:rest rdf:nodeID="A42"/>
+    <rdf:first rdf:resource="http://linked.earth/ontology#ObservationModel"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#includesVariable">
     <rdfs:range rdf:resource="http://linked.earth/ontology#Variable"/>
@@ -1112,10 +1133,18 @@
     <rdfs:label xml:lang="en">includesVariable</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#description">
+  <rdf:Description rdf:about="http://linked.earth/ontology#calibratedFrom">
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#MeasuredVariable"/>
+    <rdfs:range rdf:resource="http://linked.earth/ontology#CalibrationModel"/>
+    <rdfs:comment xml:lang="en">Property that indicates how the measured variable was calibrated</rdfs:comment>
+    <rdfs:label xml:lang="en">calibratedFrom</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://linked.earth/ontology#uncertaintyLevel">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:comment xml:lang="en">The description of a resource. This property may be used to provide further details on instrument descriptions, uncertainty description,etc.</rdfs:comment>
-    <rdfs:label xml:lang="en">description</rdfs:label>
+    <rdfs:domain rdf:resource="http://linked.earth/ontology#Uncertainty"/>
+    <rdfs:comment>Quantile or number of standard deviations along a probability distribution of a Variable.</rdfs:comment>
+    <rdfs:label xml:lang="en">uncertaintyLevel</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#fundingAgency">
@@ -1126,31 +1155,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#uncertaintyLevel">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Uncertainty"/>
-    <rdfs:comment>Quantile or number of standard deviations along a probability distribution of a Variable.</rdfs:comment>
-    <rdfs:label xml:lang="en">uncertaintyLevel</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#calibratedFrom">
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#MeasuredVariable"/>
-    <rdfs:range rdf:resource="http://linked.earth/ontology#CalibrationModel"/>
-    <rdfs:comment xml:lang="en">Property that indicates how the measured variable was calibrated</rdfs:comment>
-    <rdfs:label xml:lang="en">calibratedFrom</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A47">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://linked.earth/ontology#Publication"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://linked.earth/ontology#hasID">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://linked.earth/ontology#Variable"/>
-    <rdfs:comment xml:lang="en">ID for a variable in a table</rdfs:comment>
-    <rdfs:label xml:lang="en">hasID</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://linked.earth/ontology#hasISSN">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
@@ -1158,9 +1162,5 @@
     <rdfs:comment xml:lang="en">8-digit code used to udentify publications</rdfs:comment>
     <rdfs:label xml:lang="en">hasISSN</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A21">
-    <owl:unionOf rdf:nodeID="A36"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
 </rdf:RDF>
