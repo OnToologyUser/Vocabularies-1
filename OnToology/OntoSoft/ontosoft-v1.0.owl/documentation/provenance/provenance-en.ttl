@@ -1,0 +1,14 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<..\index-en.html> a prov:Entity;
+	 dc:title "The Ontosoft ontology";
+	 prov:wasAttributedTo <http://www.isi.edu/~varunr/>;
+	 dc:creator <http://www.isi.edu/~varunr/>;
+	 prov:wasAttributedTo <http://www.isi.edu/~gil/>;
+	 dc:creator <http://www.isi.edu/~gil/>;
+	 prov:wasAttributedTo <http://delicias.dia.fi.upm.es/members/DGarijo#me>;
+	 dc:contributor <http://delicias.dia.fi.upm.es/members/DGarijo#me>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2015-05-01";
+.

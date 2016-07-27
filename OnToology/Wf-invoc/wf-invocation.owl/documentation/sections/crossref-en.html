@@ -1,0 +1,211 @@
+<h2>4. Cross reference for Workflow Invocation Ontology classes, properties and dataproperties</h2>
+This section provides details for each class and property defined by Workflow Invocation Ontology.
+<div id="classes">
+   <h2>Classes</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#Step" title="http://purl.org/net/wf-invocation#Step">Step</a>
+      </li>
+      <li>
+         <a href="#Variable" title="http://purl.org/net/wf-invocation#Variable">Variable</a>
+      </li>
+   </ul>
+   <div class="entity" id="Step">
+      <h3>Step<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wf-invocation#Step</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>
+            <a href="http://purl.org/net/wf-invocation#">http://purl.org/net/wf-invocation#</a>
+         </dd>
+      </dl>
+      <div class="comment">
+         <span class="markdown">Specialization of p-plan:Step in order to be able to assert domain specific properties. A wf-invoc:Step refers to those p-plan:Steps related to the scientific workflow invocation.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/p-plan#Step">step</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasCodeBinding" title="http://purl.org/net/wf-invocation#hasCodeBinding">has Code Binding</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCustomData" title="http://purl.org/net/wf-invocation#hasCustomData">has Custom Data</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasInvocationLine"
+               title="http://purl.org/net/wf-invocation#hasInvocationLine">has Invocation Line</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Variable">
+      <h3>Variable<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wf-invocation#Variable</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>
+            <a href="http://purl.org/net/wf-invocation#">http://purl.org/net/wf-invocation#</a>
+         </dd>
+      </dl>
+      <div class="comment">
+         <span class="markdown">Specialization of p-plan:Variable in order to be able to assert specific properties. A wf-invoc:Variable refers to those p-plan:Variables related to the scientific workflow invocation.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://purl.org/net/p-plan#Variable">variable</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasDataBinding" title="http://purl.org/net/wf-invocation#hasDataBinding">has Data Binding</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="dataproperties">
+   <h2>Data Properties</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#hasCodeBinding" title="http://purl.org/net/wf-invocation#hasCodeBinding">has Code Binding</a>
+      </li>
+      <li>
+         <a href="#hasCustomData" title="http://purl.org/net/wf-invocation#hasCustomData">has Custom Data</a>
+      </li>
+      <li>
+         <a href="#hasDataBinding" title="http://purl.org/net/wf-invocation#hasDataBinding">has Data Binding</a>
+      </li>
+      <li>
+         <a href="#hasInvocationLine"
+            title="http://purl.org/net/wf-invocation#hasInvocationLine">has Invocation Line</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasCodeBinding">
+      <h3>has Code Binding<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wf-invocation#hasCodeBinding</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>
+            <a href="http://purl.org/net/wf-invocation#">http://purl.org/net/wf-invocation#</a>
+         </dd>
+      </dl>
+      <div class="comment">
+         <span class="markdown">Data property used to bind a wf-invoc:Step to the code/library/software used to execute the workflow step.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Step" title="http://purl.org/net/wf-invocation#Step">Step</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasCustomData">
+      <h3>has Custom Data<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wf-invocation#hasCustomData</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>
+            <a href="http://purl.org/net/wf-invocation#">http://purl.org/net/wf-invocation#</a>
+         </dd>
+      </dl>
+      <div class="comment">
+         <span class="markdown">Data property used to link a wf-invoc:Step with any particular metadata that will be used in the execution of the Step (e.g., environment requirements, memory, etc.)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Step" title="http://purl.org/net/wf-invocation#Step">Step</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDataBinding">
+      <h3>has Data Binding<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wf-invocation#hasDataBinding</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>
+            <a href="http://purl.org/net/wf-invocation#">http://purl.org/net/wf-invocation#</a>
+         </dd>
+      </dl>
+      <div class="comment">
+         <span class="markdown">Data property used to bind a wf-invoc:Variable with the path or URL where the data is available for the execution.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Variable" title="http://purl.org/net/wf-invocation#Variable">Variable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasInvocationLine">
+      <h3>has Invocation Line<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/net/wf-invocation#hasInvocationLine</p>
+      <dl class="definedBy">
+         <dt>is defined by</dt>
+         <dd>
+            <a href="http://purl.org/net/wf-invocation#">http://purl.org/net/wf-invocation#</a>
+         </dd>
+      </dl>
+      <div class="comment">
+         <span class="markdown">Data property used to link a wf-invoc:Step with the Literal representing the invocation line of the current Step.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Step" title="http://purl.org/net/wf-invocation#Step">Step</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div>

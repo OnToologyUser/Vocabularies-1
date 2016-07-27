@@ -1,0 +1,7 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:MassSpecData" "http://disk-project.org/ontology/disk#Data" ; /*classes style*/
+	"base:MassSpecData" -> "http://disk-project.org/ontology/disk#Data" [ label = "rdfs:subClassOf" ];
+
+}

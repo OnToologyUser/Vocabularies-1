@@ -1,0 +1,26 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:Variable" "base:Step" "p-plan:Variable" "p-plan:Step" "p-plan:MultiStep" "p-plan:Activity" "p-plan:Entity" "prov:Entity" "p-plan:Plan" "prov:Activity" ; /*classes style*/
+	"http://purl.org/net/wf-invocation" -> "p-plan:" [ label = "owl:imports" ];
+	"p-plan:isSubPlanOfPlan" -> "owl:topObjectProperty" [ label = "rdfs:subPropertyOf" ];
+	"base:Variable" -> "rdfs:Literal" [ label = "base:hasDataBinding" ];
+	"p-plan:Plan" -> "p-plan:Plan" [ label = "p-plan:isSubPlanOfPlan" ];
+	"prov:Entity" -> "prov:Entity" [ label = "prov:wasDerivedFrom" ];
+	"prov:Entity" -> "prov:Activity" [ label = "prov:wasGeneratedBy" ];
+	"p-plan:Step" -> "p-plan:Plan" [ label = "p-plan:isStepOfPlan" ];
+	"p-plan:Variable" -> "p-plan:Plan" [ label = "p-plan:isVariableOfPlan" ];
+	"p-plan:Step" -> "p-plan:Variable" [ label = "p-plan:hasInputVar" ];
+	"p-plan:Step" -> "p-plan:Step" [ label = "p-plan:isPrecededBy" ];
+	"p-plan:MultiStep" -> "p-plan:Plan" [ label = "p-plan:isDecomposedAsPlan" ];
+	"base:Step" -> "rdfs:Literal" [ label = "base:hasInvocationLine" ];
+	"p-plan:Step" -> "p-plan:Variable" [ label = "p-plan:hasOutputVar" ];
+	"base:Step" -> "xsd:string" [ label = "base:hasCodeBinding" ];
+	"p-plan:Activity" -> "p-plan:Step" [ label = "p-plan:correspondsToStep" ];
+	"p-plan:Entity" -> "p-plan:Variable" [ label = "p-plan:correspondsToVariable" ];
+	"prov:Activity" -> "prov:Entity" [ label = "prov:used" ];
+	"p-plan:Variable" -> "p-plan:Step" [ label = "p-plan:isInputVarOf" ];
+	"p-plan:Variable" -> "p-plan:Step" [ label = "p-plan:isOutputVarOf" ];
+	"base:Step" -> "rdfs:Literal" [ label = "base:hasCustomData" ];
+
+}

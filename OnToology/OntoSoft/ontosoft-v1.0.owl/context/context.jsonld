@@ -1,0 +1,436 @@
+{
+  "@context" : {
+    "hasCompositionDescription" : {
+      "@id" : "http://ontosoft.org/software#hasCompositionDescription",
+      "@type" : "@id"
+    },
+    "hasUnits" : {
+      "@id" : "http://ontosoft.org/software#hasUnits",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasURI" : {
+      "@id" : "http://ontosoft.org/software#hasURI",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "hasRelevantDataSources" : {
+      "@id" : "http://ontosoft.org/software#hasRelevantDataSources",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "Software" : {
+      "@id" : "http://ontosoft.org/software#Software"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "hasRating" : {
+      "@id" : "http://ontosoft.org/software#hasRating",
+      "@type" : "@id"
+    },
+    "SoftwareCategory" : {
+      "@id" : "http://ontosoft.org/software#SoftwareCategory"
+    },
+    "UsageInformation" : {
+      "@id" : "http://ontosoft.org/software#UsageInformation"
+    },
+    "hasTestDataDescription" : {
+      "@id" : "http://ontosoft.org/software#hasTestDataDescription",
+      "@type" : "@id"
+    },
+    "SoftwareVersion" : {
+      "@id" : "http://ontosoft.org/software#SoftwareVersion"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license",
+      "@type" : "@id"
+    },
+    "hasLicense" : {
+      "@id" : "http://ontosoft.org/software#hasLicense",
+      "@type" : "@id"
+    },
+    "EnumerationEntity" : {
+      "@id" : "http://ontosoft.org/software#EnumerationEntity"
+    },
+    "CitationText" : {
+      "@id" : "http://ontosoft.org/software#CitationText"
+    },
+    "hasTextValue" : {
+      "@id" : "http://ontosoft.org/software#hasTextValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasVersionReleaseDate" : {
+      "@id" : "http://ontosoft.org/software#hasVersionReleaseDate",
+      "@type" : "@id"
+    },
+    "Composition" : {
+      "@id" : "http://ontosoft.org/software#Composition"
+    },
+    "hasWorkflowDescription" : {
+      "@id" : "http://ontosoft.org/software#hasWorkflowDescription",
+      "@type" : "@id"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "hasFileType" : {
+      "@id" : "http://ontosoft.org/software#hasFileType",
+      "@type" : "@id"
+    },
+    "hasCitationLocation" : {
+      "@id" : "http://ontosoft.org/software#hasCitationLocation",
+      "@type" : "@id"
+    },
+    "hasName" : {
+      "@id" : "http://ontosoft.org/software#hasName",
+      "@type" : "@id"
+    },
+    "hasOutput" : {
+      "@id" : "http://ontosoft.org/software#hasOutput",
+      "@type" : "@id"
+    },
+    "hasTestInstructions" : {
+      "@id" : "http://ontosoft.org/software#hasTestInstructions",
+      "@type" : "@id"
+    },
+    "UseLimitations" : {
+      "@id" : "http://ontosoft.org/software#UseLimitations"
+    },
+    "hasImplementationLanguage" : {
+      "@id" : "http://ontosoft.org/software#hasImplementationLanguage",
+      "@type" : "@id"
+    },
+    "hasPreferredCitation" : {
+      "@id" : "http://ontosoft.org/software#hasPreferredCitation",
+      "@type" : "@id"
+    },
+    "hasSalientQualities" : {
+      "@id" : "http://ontosoft.org/software#hasSalientQualities",
+      "@type" : "@id"
+    },
+    "TestData" : {
+      "@id" : "http://ontosoft.org/software#TestData"
+    },
+    "supersededBy" : {
+      "@id" : "http://ontosoft.org/software#supersededBy",
+      "@type" : "@id"
+    },
+    "hasDependency" : {
+      "@id" : "http://ontosoft.org/software#hasDependency",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "hasInstallationInstructions" : {
+      "@id" : "http://ontosoft.org/software#hasInstallationInstructions",
+      "@type" : "@id"
+    },
+    "TestInstructions" : {
+      "@id" : "http://ontosoft.org/software#TestInstructions"
+    },
+    "NumericEntity" : {
+      "@id" : "http://ontosoft.org/software#NumericEntity"
+    },
+    "DateEntity" : {
+      "@id" : "http://ontosoft.org/software#DateEntity"
+    },
+    "Location" : {
+      "@id" : "http://ontosoft.org/software#Location"
+    },
+    "hasCompatibleSoftware" : {
+      "@id" : "http://ontosoft.org/software#hasCompatibleSoftware",
+      "@type" : "@id"
+    },
+    "hasFundingSources" : {
+      "@id" : "http://ontosoft.org/software#hasFundingSources",
+      "@type" : "@id"
+    },
+    "hasMajorContributor" : {
+      "@id" : "http://ontosoft.org/software#hasMajorContributor",
+      "@type" : "@id"
+    },
+    "hasShortDescription" : {
+      "@id" : "http://ontosoft.org/software#hasShortDescription",
+      "@type" : "@id"
+    },
+    "usedInPublication" : {
+      "@id" : "http://ontosoft.org/software#usedInPublication",
+      "@type" : "@id"
+    },
+    "ProgrammingLanguage" : {
+      "@id" : "http://ontosoft.org/software#ProgrammingLanguage"
+    },
+    "hasSoftwareSupport" : {
+      "@id" : "http://ontosoft.org/software#hasSoftwareSupport",
+      "@type" : "@id"
+    },
+    "Person" : {
+      "@id" : "http://ontosoft.org/software#Person"
+    },
+    "hasBenchmarkInformation" : {
+      "@id" : "http://ontosoft.org/software#hasBenchmarkInformation",
+      "@type" : "@id"
+    },
+    "similarSoftware" : {
+      "@id" : "http://ontosoft.org/software#similarSoftware",
+      "@type" : "@id"
+    },
+    "hasUniqueId" : {
+      "@id" : "http://ontosoft.org/software#hasUniqueId",
+      "@type" : "@id"
+    },
+    "hasPersonIdentifier" : {
+      "@id" : "http://ontosoft.org/software#hasPersonIdentifier",
+      "@type" : "@id"
+    },
+    "Agent" : {
+      "@id" : "http://www.w3.org/ns/prov#Agent"
+    },
+    "Citation" : {
+      "@id" : "http://ontosoft.org/software#Citation"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "hasUsesAndAssumptions" : {
+      "@id" : "http://ontosoft.org/software#hasUsesAndAssumptions",
+      "@type" : "@id"
+    },
+    "hasSoftwareCategory" : {
+      "@id" : "http://ontosoft.org/software#hasSoftwareCategory",
+      "@type" : "@id"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "MeasurementEntity" : {
+      "@id" : "http://ontosoft.org/software#MeasurementEntity"
+    },
+    "hasEmailContact" : {
+      "@id" : "http://ontosoft.org/software#hasEmailContact",
+      "@type" : "@id"
+    },
+    "hasInput" : {
+      "@id" : "http://ontosoft.org/software#hasInput",
+      "@type" : "@id"
+    },
+    "hasDomainKeywords" : {
+      "@id" : "http://ontosoft.org/software#hasDomainKeywords",
+      "@type" : "@id"
+    },
+    "hasUsageInformation" : {
+      "@id" : "http://ontosoft.org/software#hasUsageInformation",
+      "@type" : "@id"
+    },
+    "WorkflowDescription" : {
+      "@id" : "http://ontosoft.org/software#WorkflowDescription"
+    },
+    "hasTestData" : {
+      "@id" : "http://ontosoft.org/software#hasTestData",
+      "@type" : "@id"
+    },
+    "UsesAndAssumptions" : {
+      "@id" : "http://ontosoft.org/software#UsesAndAssumptions"
+    },
+    "hasDateValue" : {
+      "@id" : "http://ontosoft.org/software#hasDateValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasVersionId" : {
+      "@id" : "http://ontosoft.org/software#hasVersionId",
+      "@type" : "@id"
+    },
+    "hasTestDataLocation" : {
+      "@id" : "http://ontosoft.org/software#hasTestDataLocation",
+      "@type" : "@id"
+    },
+    "supersedes" : {
+      "@id" : "http://ontosoft.org/software#supersedes",
+      "@type" : "@id"
+    },
+    "Rating" : {
+      "@id" : "http://ontosoft.org/software#Rating"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "UsageStatistics" : {
+      "@id" : "http://ontosoft.org/software#UsageStatistics"
+    },
+    "hasUseLimitations" : {
+      "@id" : "http://ontosoft.org/software#hasUseLimitations",
+      "@type" : "@id"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "Parameter" : {
+      "@id" : "http://purl.org/dc/terms/Parameter"
+    },
+    "hasPublisher" : {
+      "@id" : "http://ontosoft.org/software#hasPublisher",
+      "@type" : "@id"
+    },
+    "searchConfig" : {
+      "@id" : "http://ontosoft.org/software#searchConfig"
+    },
+    "hasAverageRunTime" : {
+      "@id" : "http://ontosoft.org/software#hasAverageRunTime",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "hasSoftwareVersion" : {
+      "@id" : "http://ontosoft.org/software#hasSoftwareVersion",
+      "@type" : "@id"
+    },
+    "hasFileId" : {
+      "@id" : "http://ontosoft.org/software#hasFileId",
+      "@type" : "@id"
+    },
+    "Keywords" : {
+      "@id" : "http://ontosoft.org/software#Keywords"
+    },
+    "hasNumericValue" : {
+      "@id" : "http://ontosoft.org/software#hasNumericValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "hasExecutableLocation" : {
+      "@id" : "http://ontosoft.org/software#hasExecutableLocation",
+      "@type" : "@id"
+    },
+    "hasInputParameter" : {
+      "@id" : "http://ontosoft.org/software#hasInputParameter",
+      "@type" : "@id"
+    },
+    "hasInteroperableSoftware" : {
+      "@id" : "http://ontosoft.org/software#hasInteroperableSoftware",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "BenchmarkInformation" : {
+      "@id" : "http://ontosoft.org/software#BenchmarkInformation"
+    },
+    "ComplexEntity" : {
+      "@id" : "http://ontosoft.org/software#ComplexEntity"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/terms/date",
+      "@type" : "@id"
+    },
+    "Entity" : {
+      "@id" : "http://www.w3.org/ns/prov#Entity"
+    },
+    "hasAdopter" : {
+      "@id" : "http://ontosoft.org/software#hasAdopter",
+      "@type" : "@id"
+    },
+    "category" : {
+      "@id" : "http://ontosoft.org/software#category"
+    },
+    "ImplementationDetails" : {
+      "@id" : "http://ontosoft.org/software#ImplementationDetails"
+    },
+    "hasUseStatistics" : {
+      "@id" : "http://ontosoft.org/software#hasUseStatistics",
+      "@type" : "@id"
+    },
+    "hasSoftwareCommunity" : {
+      "@id" : "http://ontosoft.org/software#hasSoftwareCommunity",
+      "@type" : "@id"
+    },
+    "FileIO" : {
+      "@id" : "http://ontosoft.org/software#FileIO"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "hasProjectWebsite" : {
+      "@id" : "http://ontosoft.org/software#hasProjectWebsite",
+      "@type" : "@id"
+    },
+    "hasDocumentation" : {
+      "@id" : "http://ontosoft.org/software#hasDocumentation",
+      "@type" : "@id"
+    },
+    "License" : {
+      "@id" : "http://ontosoft.org/software#License"
+    },
+    "hasCodeLocation" : {
+      "@id" : "http://ontosoft.org/software#hasCodeLocation",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor",
+      "@type" : "@id"
+    },
+    "SoftwareDescription" : {
+      "@id" : "http://ontosoft.org/software#SoftwareDescription"
+    },
+    "hasActiveDevelopment" : {
+      "@id" : "http://ontosoft.org/software#hasActiveDevelopment",
+      "@type" : "@id"
+    },
+    "hasCreator" : {
+      "@id" : "http://ontosoft.org/software#hasCreator",
+      "@type" : "@id"
+    },
+    "DevelopmentInformation" : {
+      "@id" : "http://ontosoft.org/software#DevelopmentInformation"
+    },
+    "hasOtherImplementationDetails" : {
+      "@id" : "http://ontosoft.org/software#hasOtherImplementationDetails",
+      "@type" : "@id"
+    },
+    "uiConfig" : {
+      "@id" : "http://ontosoft.org/software#uiConfig"
+    },
+    "requiresAverageMemory" : {
+      "@id" : "http://ontosoft.org/software#requiresAverageMemory",
+      "@type" : "@id"
+    },
+    "TextEntity" : {
+      "@id" : "http://ontosoft.org/software#TextEntity"
+    },
+    "Identifier" : {
+      "@id" : "http://ontosoft.org/software#Identifier"
+    },
+    "description" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#description"
+    },
+    "hasCitationText" : {
+      "@id" : "http://ontosoft.org/software#hasCitationText",
+      "@type" : "@id"
+    },
+    "CommunityInformation" : {
+      "@id" : "http://ontosoft.org/software#CommunityInformation"
+    },
+    "supportsOperatingSystem" : {
+      "@id" : "http://ontosoft.org/software#supportsOperatingSystem",
+      "@type" : "@id"
+    },
+    "OperatingSystem" : {
+      "@id" : "http://ontosoft.org/software#OperatingSystem"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "TestDataDescription" : {
+      "@id" : "http://ontosoft.org/software#TestDataDescription"
+    },
+    "isRequired" : {
+      "@id" : "http://ontosoft.org/software#isRequired"
+    },
+    "hasCommitmentOfSupport" : {
+      "@id" : "http://ontosoft.org/software#hasCommitmentOfSupport",
+      "@type" : "@id"
+    }
+  }
+}
