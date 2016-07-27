@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY software "http://ontosoft.org/software#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://ontosoft.org/software#"
+     xml:base="http://ontosoft.org/software"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:software="http://ontosoft.org/software#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://ontosoft.org/softwareCategories">
+        <owl:versionInfo rdf:datatype="&xsd;decimal">1.0</owl:versionInfo>
+        <rdfs:comment rdf:datatype="&xsd;decimal">Ontosoft Categories is an ontology to describe the taxonomy of categories in Ontosoft.</rdfs:comment>
+    </owl:Ontology>
+    
+
+    <!-- http://ontosoft.org/software#uiConfig -->
+
+    <owl:AnnotationProperty rdf:about="&software;uiConfig">
+        <rdfs:comment xml:lang="en">This property annotation provides UI specific information for the property like positioning, special UI interface, etc</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Access -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Access">
+        <software:uiConfig>{"position":1}</software:uiConfig>
+        <rdfs:label xml:lang="en">Access</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#Execute"/>
+        <rdfs:comment xml:lang="en">download</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Cite -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Cite">
+        <software:uiConfig>{"position":3}</software:uiConfig>
+        <rdfs:label xml:lang="en">Cite</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#Research"/>
+        <rdfs:comment xml:lang="en">scientific publications</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Compose -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Compose">
+        <software:uiConfig>{"position":2}</software:uiConfig>
+        <rdfs:label xml:lang="en">Compose</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#Research"/>
+        <rdfs:comment xml:lang="en">run with other software</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Contribute -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Contribute">
+        <software:uiConfig>{"position":1}</software:uiConfig>
+        <rdfs:label xml:lang="en">Contribute</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#Update"/>
+        <rdfs:comment xml:lang="en">evolution</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Discuss -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Discuss">
+        <rdfs:label xml:lang="en">Discuss</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#GetSupport"/>
+        <rdfs:comment xml:lang="en">support and community</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Execute -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Execute">
+        <software:uiConfig>{"position":3}</software:uiConfig>
+        <rdfs:label xml:lang="en">Execute</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#MetadataCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Experiment -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Experiment">
+        <software:uiConfig>{"position":1}</software:uiConfig>
+        <rdfs:label xml:lang="en">Experiment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#Research"/>
+        <rdfs:comment xml:lang="en">run with other data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#GetSupport -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#GetSupport">
+        <software:uiConfig>{"position":5}</software:uiConfig>
+        <rdfs:label>Get Support</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#MetadataCategory"/>
+        <rdfs:comment>All the properties that relate to describing how to get support from a community</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Identify -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Identify">
+        <software:uiConfig>{"position":1}</software:uiConfig>
+        <rdfs:label>Identify</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#MetadataCategory"/>
+        <rdfs:comment>Properties that identify how to refer to a resource</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Install -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Install">
+        <software:uiConfig>{"position":2}</software:uiConfig>
+        <rdfs:label xml:lang="en">Install</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#Execute"/>
+        <rdfs:comment xml:lang="en">execution requirements</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Locate -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Locate">
+        <software:uiConfig>{"position":1}</software:uiConfig>
+        <rdfs:label>Locate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#Identify"/>
+        <rdfs:comment>unique description</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#MetadataCategory -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#MetadataCategory">
+        <rdfs:label xml:lang="en">Metadata Category</rdfs:label>
+        <rdfs:comment xml:lang="en">Categories of metadata properties are defined as subclass of this</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Relate -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Relate">
+        <software:uiConfig>{"position":2}</software:uiConfig>
+        <rdfs:label xml:lang="en">Relate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#Understand"/>
+        <rdfs:comment xml:lang="en">domain knowledge</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Research -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Research">
+        <software:uiConfig>{"position":4}</software:uiConfig>
+        <rdfs:label xml:lang="en">Do Research</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#MetadataCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Run -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Run">
+        <software:uiConfig>{"position":3}</software:uiConfig>
+        <rdfs:label xml:lang="en">Run</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#Execute"/>
+        <rdfs:comment xml:lang="en">testing execution</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Track -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Track">
+        <software:uiConfig>{"position":2}</software:uiConfig>
+        <rdfs:label xml:lang="en">Track</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#Update"/>
+        <rdfs:comment xml:lang="en">versions</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Trust -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Trust">
+        <software:uiConfig>{"position":1}</software:uiConfig>
+        <rdfs:label xml:lang="en">Trust</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#Understand"/>
+        <rdfs:comment xml:lang="en">quality and ratings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Understand -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Understand">
+        <software:uiConfig>{"position":2}</software:uiConfig>
+        <rdfs:label xml:lang="en">Understand</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#MetadataCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ontosoft.org/softwareCategories#Update -->
+
+    <owl:Class rdf:about="http://ontosoft.org/softwareCategories#Update">
+        <software:uiConfig>{"position":6}</software:uiConfig>
+        <rdfs:label xml:lang="en">Update</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://ontosoft.org/softwareCategories#MetadataCategory"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
