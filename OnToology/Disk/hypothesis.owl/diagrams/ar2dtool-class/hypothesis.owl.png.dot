@@ -1,0 +1,8 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"http://disk-project.org/ontology/hypothesis" -> "http://www.disk-project.org/ontology/hypothesis/hypothesis-1.0.0.owlUPDATE" [ label = "owl:versionIRI" ];
+	"http://disk-project.org/ontology/hypothesis" -> "http://disk-project.org/ontology/hypothesis" [ label = "vann:preferredNamespaceUri" ];
+	"http://disk-project.org/ontology/hypothesis" -> "http://purl.org/NET/rdflicense/APACHE2.0" [ label = "dcterms:license" ];
+
+}

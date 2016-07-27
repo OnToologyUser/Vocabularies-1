@@ -1,0 +1,62 @@
+{
+  "@context" : {
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "hasCodeBinding" : {
+      "@id" : "http://purl.org/net/wf-invocation#hasCodeBinding",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Thing" : {
+      "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "hasDataBinding" : {
+      "@id" : "http://purl.org/net/wf-invocation#hasDataBinding",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Step" : {
+      "@id" : "http://purl.org/net/wf-invocation#Step"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "hasCustomData" : {
+      "@id" : "http://purl.org/net/wf-invocation#hasCustomData",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "Variable" : {
+      "@id" : "http://purl.org/net/p-plan#Variable"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "hasInvocationLine" : {
+      "@id" : "http://purl.org/net/wf-invocation#hasInvocationLine",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}

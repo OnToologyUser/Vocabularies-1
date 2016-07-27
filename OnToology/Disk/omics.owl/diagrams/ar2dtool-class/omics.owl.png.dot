@@ -1,0 +1,16 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:Tissue" "base:Patient" "base:Experiment" "base:Diagnosis" "base:Cancer" ; /*classes style*/
+	"http://disk-project.org/ontology/omics" -> "http://www.disk-project.org/ontology/omics/omics-1.0.0.owl#UPDATE" [ label = "owl:versionIRI" ];
+	"http://disk-project.org/ontology/omics" -> "http://purl.org/NET/rdflicense/APACHE2.0" [ label = "dcterms:license" ];
+	"http://disk-project.org/ontology/omics" -> "http://disk-project.org/ontology/omics" [ label = "vann:preferredNamespaceUri" ];
+	"base:Experiment" -> "owl:Thing" [ label = "base:producedData" ];
+	"base:Patient" -> "base:Diagnosis" [ label = "base:hasDiagnosis" ];
+	"base:Tissue" -> "xsd:dateTime" [ label = "base:collectedAt" ];
+	"base:Experiment" -> "owl:Thing" [ label = "base:experimentedOn" ];
+	"base:Tissue" -> "base:Patient" [ label = "base:collectedFrom" ];
+	"base:Diagnosis" -> "base:Cancer" [ label = "base:isDiagnosedWith" ];
+	"base:Diagnosis" -> "xsd:dateTime" [ label = "base:diagnosedAt" ];
+
+}

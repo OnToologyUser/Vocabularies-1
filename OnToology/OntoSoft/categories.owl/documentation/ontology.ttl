@@ -1,0 +1,143 @@
+@prefix :        <http://ontosoft.org/software#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix software:  <http://ontosoft.org/software#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://ontosoft.org/softwareCategories#Install>
+      a       owl:Class ;
+      rdfs:comment "execution requirements"@en ;
+      rdfs:label "Install"@en ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#Execute> ;
+      software:uiConfig "{\"position\":2}" .
+
+<http://ontosoft.org/softwareCategories>
+      a       owl:Ontology ;
+      rdfs:comment "Ontosoft Categories is an ontology to describe the taxonomy of categories in Ontosoft."^^xsd:decimal ;
+      owl:versionInfo 1.0 .
+
+<http://ontosoft.org/softwareCategories#Relate>
+      a       owl:Class ;
+      rdfs:comment "domain knowledge"@en ;
+      rdfs:label "Relate"@en ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#Understand> ;
+      software:uiConfig "{\"position\":2}" .
+
+<http://ontosoft.org/softwareCategories#Identify>
+      a       owl:Class ;
+      rdfs:comment "Properties that identify how to refer to a resource" ;
+      rdfs:label "Identify" ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#MetadataCategory> ;
+      software:uiConfig "{\"position\":1}" .
+
+<http://ontosoft.org/softwareCategories#Cite>
+      a       owl:Class ;
+      rdfs:comment "scientific publications"@en ;
+      rdfs:label "Cite"@en ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#Research> ;
+      software:uiConfig "{\"position\":3}" .
+
+<http://ontosoft.org/softwareCategories#Contribute>
+      a       owl:Class ;
+      rdfs:comment "evolution"@en ;
+      rdfs:label "Contribute"@en ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#Update> ;
+      software:uiConfig "{\"position\":1}" .
+
+<http://ontosoft.org/softwareCategories#Execute>
+      a       owl:Class ;
+      rdfs:label "Execute"@en ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#MetadataCategory> ;
+      software:uiConfig "{\"position\":3}" .
+
+<http://ontosoft.org/softwareCategories#Experiment>
+      a       owl:Class ;
+      rdfs:comment "run with other data"@en ;
+      rdfs:label "Experiment"@en ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#Research> ;
+      software:uiConfig "{\"position\":1}" .
+
+<http://ontosoft.org/softwareCategories#Update>
+      a       owl:Class ;
+      rdfs:label "Update"@en ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#MetadataCategory> ;
+      software:uiConfig "{\"position\":6}" .
+
+<http://ontosoft.org/softwareCategories#Discuss>
+      a       owl:Class ;
+      rdfs:comment "support and community"@en ;
+      rdfs:label "Discuss"@en ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#GetSupport> .
+
+<http://ontosoft.org/softwareCategories#Access>
+      a       owl:Class ;
+      rdfs:comment "download"@en ;
+      rdfs:label "Access"@en ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#Execute> ;
+      software:uiConfig "{\"position\":1}" .
+
+<http://ontosoft.org/softwareCategories#Track>
+      a       owl:Class ;
+      rdfs:comment "versions"@en ;
+      rdfs:label "Track"@en ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#Update> ;
+      software:uiConfig "{\"position\":2}" .
+
+<http://ontosoft.org/softwareCategories#Understand>
+      a       owl:Class ;
+      rdfs:label "Understand"@en ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#MetadataCategory> ;
+      software:uiConfig "{\"position\":2}" .
+
+<http://ontosoft.org/softwareCategories#GetSupport>
+      a       owl:Class ;
+      rdfs:comment "All the properties that relate to describing how to get support from a community" ;
+      rdfs:label "Get Support" ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#MetadataCategory> ;
+      software:uiConfig "{\"position\":5}" .
+
+<http://ontosoft.org/softwareCategories#MetadataCategory>
+      a       owl:Class ;
+      rdfs:comment "Categories of metadata properties are defined as subclass of this"@en ;
+      rdfs:label "Metadata Category"@en .
+
+<http://ontosoft.org/softwareCategories#Compose>
+      a       owl:Class ;
+      rdfs:comment "run with other software"@en ;
+      rdfs:label "Compose"@en ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#Research> ;
+      software:uiConfig "{\"position\":2}" .
+
+<http://ontosoft.org/softwareCategories#Research>
+      a       owl:Class ;
+      rdfs:label "Do Research"@en ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#MetadataCategory> ;
+      software:uiConfig "{\"position\":4}" .
+
+<http://ontosoft.org/softwareCategories#Trust>
+      a       owl:Class ;
+      rdfs:comment "quality and ratings"@en ;
+      rdfs:label "Trust"@en ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#Understand> ;
+      software:uiConfig "{\"position\":1}" .
+
+software:uiConfig
+      a       owl:AnnotationProperty ;
+      rdfs:comment "This property annotation provides UI specific information for the property like positioning, special UI interface, etc"@en .
+
+<http://ontosoft.org/softwareCategories#Run>
+      a       owl:Class ;
+      rdfs:comment "testing execution"@en ;
+      rdfs:label "Run"@en ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#Execute> ;
+      software:uiConfig "{\"position\":3}" .
+
+<http://ontosoft.org/softwareCategories#Locate>
+      a       owl:Class ;
+      rdfs:comment "unique description" ;
+      rdfs:label "Locate" ;
+      rdfs:subClassOf <http://ontosoft.org/softwareCategories#Identify> ;
+      software:uiConfig "{\"position\":1}" .

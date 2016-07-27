@@ -1,0 +1,105 @@
+@prefix :        <http://disk-project.org/ontology/disk#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix xml:     <http://www.w3.org/XML/1998/namespace> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+
+:Data
+      a       owl:Class .
+
+:hasResultingHypothesis
+      a       owl:ObjectProperty ;
+      rdfs:range :Hypothesis .
+
+:VariableBinding
+      a       owl:Class .
+
+:hasMetaWorkflowBindings
+      a       owl:ObjectProperty ;
+      rdfs:domain :LineOfInquiry ;
+      rdfs:range :WorkflowBindings .
+
+:hasLOI
+      a       owl:ObjectProperty ;
+      rdfs:domain :TriggeredLOI ;
+      rdfs:range :LineOfInquiry .
+
+:hasParentHypothesis
+      a       owl:ObjectProperty ;
+      rdfs:range :Hypothesis .
+
+:hasWorkflowBindings
+      a       owl:ObjectProperty ;
+      rdfs:domain :LineOfInquiry ;
+      rdfs:range :WorkflowBindings .
+
+:WorkflowBindings
+      a       owl:Class .
+
+<http://disk-project.org/ontology/disk>
+      a       owl:Ontology ;
+      rdfs:comment "The Disk vocabulary introduces the terms for creating hypothesis graphs and associate them to different lines of inquiry. "@en ;
+      dc:contributor "Yolanda Gil" , "Daniel Garijo" ;
+      dc:created "2016-03-24T20:18:00Z"^^xsd:dateTime ;
+      dc:creator "Varun Ratnakar" ;
+      dc:description "The Disk vocabulary introduces the terms for creating hypothesis graphs and associate them to different lines of inquiry. "@en ;
+      dc:title "The Disk-terms Ontology"@en ;
+      dcterms:abstract "The Disk vocabulary introduces the terms for creating hypothesis graphs and associate them to different lines of inquiry. "@en ;
+      dcterms:license <http://purl.org/NET/rdflicense/APACHE2.0> ;
+      vann:preferredNamespacePrefix
+              "disk" ;
+      vann:preferredNamespaceUri
+              <http://disk-project.org/ontology/disk> ;
+      owl:versionIRI <http://www.disk-project.org/ontology/disk/disk-1.0.0.owl#UPDATE> ;
+      owl:versionInfo "1.0.0 First Draft" .
+
+:hasTriggeredLOIStatus
+      a       owl:DatatypeProperty ;
+      rdfs:domain :TriggeredLOI ;
+      rdfs:range xsd:string .
+
+:Workflow
+      a       owl:Class ;
+      rdfs:subClassOf :Graph .
+
+:createdFrom
+      a       owl:ObjectProperty ;
+      rdfs:domain :Data .
+
+:hasVariable
+      a       owl:ObjectProperty ;
+      rdfs:domain :VariableBinding .
+
+:hasVariableBinding
+      a       owl:ObjectProperty ;
+      rdfs:domain :WorkflowBindings ;
+      rdfs:range :VariableBinding .
+
+:Graph
+      a       owl:Class .
+
+:TriggeredLOI
+      a       owl:Class ;
+      rdfs:subClassOf :LineOfInquiry .
+
+:Hypothesis
+      a       owl:Class ;
+      rdfs:subClassOf :Graph .
+
+:hasBinding
+      a       owl:DatatypeProperty ;
+      rdfs:domain :VariableBinding ;
+      rdfs:range xsd:string .
+
+:hasPatternQuery
+      a       owl:DatatypeProperty ;
+      rdfs:domain :LineOfInquiry ;
+      rdfs:range xsd:string .
+
+:LineOfInquiry
+      a       owl:Class ;
+      rdfs:subClassOf :Graph .

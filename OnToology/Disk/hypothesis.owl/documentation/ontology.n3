@@ -1,0 +1,15 @@
+<http://disk-project.org/ontology/hypothesis#associatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://disk-project.org/ontology/hypothesis> <http://purl.org/dc/elements/1.1/contributor> "Yolanda Gil" .
+<http://disk-project.org/ontology/hypothesis> <http://purl.org/dc/elements/1.1/creator> "Varun Ratnakar" .
+<http://disk-project.org/ontology/hypothesis> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.disk-project.org/ontology/hypothesis/hypothesis-1.0.0.owlUPDATE> .
+<http://disk-project.org/ontology/hypothesis> <http://www.w3.org/2000/01/rdf-schema#comment> "The hypothesis vocabulary introduces a set of terms and properties for linking the terms included in a hypothesis. "@en .
+<http://disk-project.org/ontology/hypothesis> <http://purl.org/dc/terms/abstract> "The hypothesis vocabulary introduces a set of terms and properties for linking the terms included in a hypothesis. "@en .
+<http://disk-project.org/ontology/hypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://disk-project.org/ontology/hypothesis> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0 First Draft" .
+<http://disk-project.org/ontology/hypothesis> <http://purl.org/dc/elements/1.1/description> "The hypothesis vocabulary introduces a set of terms and properties for linking the terms included in a hypothesis. "@en .
+<http://disk-project.org/ontology/hypothesis> <http://purl.org/dc/elements/1.1/contributor> "Daniel Garijo" .
+<http://disk-project.org/ontology/hypothesis> <http://purl.org/vocab/vann/preferredNamespaceUri> <http://disk-project.org/ontology/hypothesis> .
+<http://disk-project.org/ontology/hypothesis> <http://purl.org/dc/elements/1.1/title> "The Disk-hypothesis Ontology"@en .
+<http://disk-project.org/ontology/hypothesis> <http://purl.org/vocab/vann/preferredNamespacePrefix> "hyp" .
+<http://disk-project.org/ontology/hypothesis> <http://purl.org/dc/elements/1.1/created> "2016-03-24T20:18:00Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://disk-project.org/ontology/hypothesis> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/APACHE2.0> .

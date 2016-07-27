@@ -1,0 +1,20 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:WorkflowBindings" "base:VariableBinding" "base:TriggeredLOI" "base:LineOfInquiry" "base:Hypothesis" "base:Data" ; /*classes style*/
+	"http://disk-project.org/ontology/disk" -> "http://www.disk-project.org/ontology/disk/disk-1.0.0.owl#UPDATE" [ label = "owl:versionIRI" ];
+	"http://disk-project.org/ontology/disk" -> "http://purl.org/NET/rdflicense/APACHE2.0" [ label = "dcterms:license" ];
+	"http://disk-project.org/ontology/disk" -> "http://disk-project.org/ontology/disk" [ label = "vann:preferredNamespaceUri" ];
+	"owl:Thing" -> "base:Hypothesis" [ label = "base:hasResultingHypothesis" ];
+	"base:WorkflowBindings" -> "base:VariableBinding" [ label = "base:hasVariableBinding" ];
+	"base:TriggeredLOI" -> "xsd:string" [ label = "base:hasTriggeredLOIStatus" ];
+	"base:LineOfInquiry" -> "base:WorkflowBindings" [ label = "base:hasWorkflowBindings" ];
+	"base:VariableBinding" -> "xsd:string" [ label = "base:hasBinding" ];
+	"base:TriggeredLOI" -> "base:LineOfInquiry" [ label = "base:hasLOI" ];
+	"base:Data" -> "owl:Thing" [ label = "base:createdFrom" ];
+	"owl:Thing" -> "base:Hypothesis" [ label = "base:hasParentHypothesis" ];
+	"base:LineOfInquiry" -> "xsd:string" [ label = "base:hasPatternQuery" ];
+	"base:LineOfInquiry" -> "base:WorkflowBindings" [ label = "base:hasMetaWorkflowBindings" ];
+	"base:VariableBinding" -> "owl:Thing" [ label = "base:hasVariable" ];
+
+}
